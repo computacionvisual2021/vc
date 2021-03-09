@@ -2,120 +2,120 @@
   "init": [
     {
       "name": "initJssCs",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/transport/setup-jss.js",
-      "hash": "DNrj9oF72JDZmT5JpqB5MA=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/transport/setup-jss.js",
+      "hash": "q0W0u2qNUE26OrSWf8bpCw=="
     },
     {
       "name": "installTheme",
-      "filename": "/home/runner/work/vc/vc/.codedoc/content/theme.ts",
-      "hash": "Ee7uESb/QVRDo1Pq0BbGDA=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/content/theme.ts",
+      "hash": "h063ySRT6NKQLiqcwUaTtw=="
     },
     {
       "name": "zoomOnFormula",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/formula/zoom-on-formula.js",
-      "hash": "ZPCLSgXUWhmVkgABPlENJQ=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/formula/zoom-on-formula.js",
+      "hash": "w32Os1VrRqNBoVG9FwkjMg=="
     },
     {
       "name": "codeSelection",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/selection.js",
-      "hash": "Se07MpPkDQ8HWTxIDftrEw=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/code/selection.js",
+      "hash": "6fw4Fukg1eliPLudeJTC2A=="
     },
     {
       "name": "sameLineLengthInCodes",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/same-line-length.js",
-      "hash": "Map5ecEb4NVNv0/QD+ZE3A=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/code/same-line-length.js",
+      "hash": "XiVqCvwegzdGw8kl/d/6tA=="
     },
     {
       "name": "initHintBox",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/line-hint/index.js",
-      "hash": "FngPUEsi8Zw/NNQWqR613A=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/code/line-hint/index.js",
+      "hash": "OupEuivHqaA2XEIfENTsLg=="
     },
     {
       "name": "initCodeLineRef",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/line-ref/index.js",
-      "hash": "BmgzQC6H5CrPYQAIFiZXFw=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/code/line-ref/index.js",
+      "hash": "RNbPhf6EO9FUUuG0jv9xOA=="
     },
     {
       "name": "initSmartCopy",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/smart-copy.js",
-      "hash": "TDfbLrPMbnmKWpRdCyehTQ=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/code/smart-copy.js",
+      "hash": "Dd4+1TOYevrU8P5u2TgcSA=="
     },
     {
       "name": "copyHeadings",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/heading/copy-headings.js",
-      "hash": "k7JN/wzVKW9o2/xVY1z7mw=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/heading/copy-headings.js",
+      "hash": "BCtpfu1qXlJabv5jcCNhRw=="
     },
     {
       "name": "contentNavHighlight",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/contentnav/highlight.js",
-      "hash": "0BP9dHLr6GeJn74oCZhwCw=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/page/contentnav/highlight.js",
+      "hash": "CxUOvFX8YM2eGYkQAx2cRw=="
     },
     {
       "name": "loadDeferredIFrames",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/transport/deferred-iframe.js",
-      "hash": "yx/uXv3RO1y1ApqwGXbm3w=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/transport/deferred-iframe.js",
+      "hash": "kFAF1BtRQl5SslTtgoY7dw=="
     },
     {
       "name": "smoothLoading",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/transport/smooth-loading.js",
-      "hash": "TCtd2IQT4JYjFkK+kvKaEA=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/transport/smooth-loading.js",
+      "hash": "iMLbaRPKylhrtlugaA0tXg=="
     },
     {
       "name": "tocHighlight",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/toc-highlight.js",
-      "hash": "U6ApG3hMhLalqkO798gZmA=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/page/toc/toc-highlight.js",
+      "hash": "S/gZOngrbVy8tjzaNeFiFA=="
     },
     {
       "name": "postNavSearch",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/search/post-nav/index.js",
-      "hash": "k4R0cRS/AtXkMn0JpedKNA=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/page/toc/search/post-nav/index.js",
+      "hash": "0M6lr+Vfr01G+J5448Kj0w=="
     },
     {
       "name": "copyLineLinks",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/code/line-links/copy-line-link.js",
-      "hash": "KDIhTKYG7bQrTlUvgii/9Q=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/code/line-links/copy-line-link.js",
+      "hash": "gQKkqDmcCMgzJL8mwhe1bQ=="
     },
     {
       "name": "gatherFootnotes",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/footnote/gather-footnotes.js",
-      "hash": "jzB/Nwlt5ch6Cn9DnxQToQ=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/footnote/gather-footnotes.js",
+      "hash": "i/rE0gSJ4TxidenxC4BVCg=="
     }
   ],
   "components": [
     {
       "name": "ToCPrevNext",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/prevnext/index.js",
-      "hash": "7H5M9Vp+I8cVV99ELLvnzg=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/page/toc/prevnext/index.js",
+      "hash": "jp2IbUSu8C09L45zTbAK7A=="
     },
     {
       "name": "CollapseControl",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/collapse/collapse-control.js",
-      "hash": "lqlJyab6eRMclBlk8Ftb8g=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/collapse/collapse-control.js",
+      "hash": "5uBdbABv/eTEOr7/+xE44Q=="
     },
     {
       "name": "GithubSearch",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/misc/github/search.js",
-      "hash": "MChpnTvN8BpuKyiMGzmSYw=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/misc/github/search.js",
+      "hash": "y1+4ju67jABlGhX1rjwxcA=="
     },
     {
       "name": "ToCToggle",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/page/toc/toggle/index.js",
-      "hash": "X5W7He+ge/Kg3B6xB+T5gg=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/page/toc/toggle/index.js",
+      "hash": "I6nsya7X/XZp8FdVx16UAQ=="
     },
     {
       "name": "DarkModeSwitch",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/components/darkmode/index.js",
-      "hash": "3ehN2Qj7wHC4donAKEDe0Q=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/components/darkmode/index.js",
+      "hash": "vMI7dNvOSKDwpBPtbCalaQ=="
     },
     {
       "name": "ConfigTransport",
-      "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/transport/config.js",
-      "hash": "bIAidu6MCPVPBcGGWLCR6Q=="
+      "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/transport/config.js",
+      "hash": "A2cF9F9WdUPQORPVNqv9QA=="
     }
   ],
   "renderer": {
     "name": "getRenderer",
-    "filename": "/home/runner/work/vc/vc/.codedoc/node_modules/@codedoc/core/dist/es6/transport/renderer.js",
-    "hash": "gJnC4d3iIK+odX9RTZZEAA=="
+    "filename": "D:/Backup/Documentos/Universidad Nacional de Colombia/Materias y Electivas/Semestre XIII/Computación Visual/vc/.codedoc/node_modules/@codedoc/core/dist/es5/transport/renderer.js",
+    "hash": "I7b93YNAK/OKIybaPWR21w=="
   }
 }
