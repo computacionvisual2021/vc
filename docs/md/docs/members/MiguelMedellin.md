@@ -6,7 +6,7 @@
 
 ## Contributions
 
-papers, blogs, research, free software...
+texto de prueba...
 
 ## Hobbies
 
