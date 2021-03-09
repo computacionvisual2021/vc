@@ -6,7 +6,7 @@
 
 ## Contributions
 
-texto de prueba...
+Texto de prueba...
 
 ## Hobbies
 
