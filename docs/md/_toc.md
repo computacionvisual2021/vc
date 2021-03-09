@@ -20,4 +20,6 @@
 
 > :Collapse label=Members
 > 
-> [NN](/docs/members/nn)
+> [Liseth Arévalo](/docs/members/LisethArevalo)
+> [Diana Guarín](/docs/members/DianaGuarin)
+> [Miguel Medellín](/docs/members/MiguelMedellin)

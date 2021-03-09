@@ -1,4 +1,4 @@
-# NN2
+# Miguel Medellín
 
 ## Bio
 
