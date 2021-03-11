@@ -3,7 +3,7 @@
 <img src="/docs/img/cat.gif" />
 
 ## Bio
-Estudiante de Ingeniería de Sistemas de último semestre
+Estudiante de Ingeniería de Sistemas de último semestre.
 
 ## Interests
 
