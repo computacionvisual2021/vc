@@ -70,6 +70,37 @@ var imageConverted = new p5((p) => {
 	}
 }, "sketch");
 
+var imageConverted2 = new p5((p) => {
+	let img;
+
+	p.preload = () => {
+		img = p.loadImage(imgPath);
+	}
+
+	p.setup = () => {
+		p.createCanvas(imgWidth, imgHeight);
+		p.pixelDensity(1);
+		p.image(img, 0, 0, imgWidth, imgHeight);
+
+		// <----
+		p.loadPixels();
+
+
+		for (let x = 0; x < p.width; x++) {
+			for (let y = 0; y < p.height; y++) {
+				let k = (x + y * p.width) * 4;
+			
+				p.pixels[k] = 255 - p.pixels[k];
+				p.pixels[k + 1] = 255 - p.pixels[k + 1];
+				p.pixels[k + 2] = 255 - p.pixels[k + 2];
+			}
+		}
+
+		p.updatePixels();
+		// ---->
+	}
+}, "sketch");
+
 let imageOriginal = new p5((p) => {
 	let img;
 
