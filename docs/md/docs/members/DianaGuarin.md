@@ -1,12 +1,13 @@
 # Diana Guarín
 
+<img src="/img/cat.jpg" />
+
 ## Bio
 
 ## Interests
 
 ## Contributions
 
-papers, blogs, research, free software...
 
 ## Hobbies
 
