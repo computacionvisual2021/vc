@@ -1,5 +1,7 @@
 # Miguel Medellín
 
+<img src="/docs/img/god.gif" />
+
 ## Bio
 
 ## Interests

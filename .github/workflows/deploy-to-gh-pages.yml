@@ -21,6 +21,7 @@ jobs:
           # copy assets
           cp -r docs/sketches dist/docs
           cp -r docs/img dist/docs
+          cp -r docs/js dist/docs
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
