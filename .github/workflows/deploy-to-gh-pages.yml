@@ -20,7 +20,7 @@ jobs:
           (PATH=$(npm bin):$PATH && codedoc build)
           # copy assets
           cp -r docs/sketches dist/docs
-          cp -r img dist
+          cp -r docs/img dist/docs
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:

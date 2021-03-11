@@ -1,6 +1,6 @@
 # Diana Guarín
 
-<img src="/img/cat.jpg" />
+<img src="/docs/img/cat.jpg" />
 
 ## Bio
 
