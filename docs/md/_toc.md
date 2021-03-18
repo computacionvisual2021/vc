@@ -18,8 +18,8 @@
 > [Libs](/docs/snippets/lib)
 > [Sound](/docs/snippets/sound)
 
-> :Collapse label=Members
+> :Collapse label=People
 > 
-> [Liseth Arévalo](/docs/members/LisethArevalo)
-> [Diana Guarín](/docs/members/DianaGuarin)
-> [Miguel Medellín](/docs/members/MiguelMedellin)
+> [Liseth Arévalo](/docs/people/LisethArevalo)
+> [Diana Guarín](/docs/people/DianaGuarin)
+> [Miguel Medellín](/docs/people/MiguelMedellin)
