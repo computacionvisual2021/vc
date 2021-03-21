@@ -5,9 +5,12 @@
     "\\.github",
     "\\.github\\workflows",
     "\\docs",
-    "\\docs\\img",
+    "\\docs\\md",
+    "\\docs\\md\\docs",
+    "\\docs\\md\\docs\\workshops",
     "\\docs\\sketches",
     "\\docs\\sketches\\workshop1"
   ],
+  "SelectedNode": "\\docs\\sketches\\workshop1\\sketch.js",
   "PreviewInSolutionExplorer": false
 }
