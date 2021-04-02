@@ -1,6 +1,6 @@
 # Diana Guarín
 
-<img src="/docs/img/cat.gif" />
+<img src="/docs/img/dianaPerfil.jpg" width=400/>
 
 ## Bio
 Estudiante de **Ingeniería de Sistemas** de último semestre en la Universidad Nacional de Colombia, trabaja actualmente en el área de Diseño y Documentación de Arquitectura de Software.
@@ -29,7 +29,6 @@ Algunos creadores han querido jugar a engañar nuestros sentidos con imágenes i
 En su obra ***Ascending and Descending*** se muestra como a pesar de la aparente elevación o disminución del nivel de las escaleras, las personas suben y bajan infinitamente. 
 
 <img src="/docs/img/escherAscendingDescending.jpg" />
-
 
 Ascending and Descending - M.C. Escher
 
@@ -80,6 +79,32 @@ No existe manera en el espacio tridimencional en el que nos encontramos de fabri
 
 Belvedere - M.C. Escher
 
+## Escherization Problem
+
+
+<img src="/docs/img/escherDiaNoche.jpg" width=400 />
+
+Dia y Noche - M.C. Escher
+
+<img src="/docs/img/escherReptiles.jpg" width=400 />
+
+Reptiles - M.C. Escher
+
+Algunas obras de Escher como "Dia y Noche" o "Reptiles" propiciaron el estudio del llamado "Escherization Problem", definido de la siguiente manera:
+
+*** " Dada una figura cerrada en un plano, el objetivo es encontrar una figura cerrada en el plano que sea lo más cercana posible a la original, que sea capaz de cubrir el plano en embaldosado (tiling)" ***
+
+
+Por ejemplo tomando la mascota del S.O. Linux "Tux" se puede solucionar satisfactoriamente el problema como se ve a continuación:
+
+<img src="/docs/img/linuxPengu.png" width=200 />
+<img src="/docs/img/linuxTiling.jfif" width=400 />
+
+Soluciones como la de [Koizumi y Sugihara](https://link.springer.com/article/10.1007/s00453-020-00695-6#:~:text=In%20the%20Escherization%20problem%2C%20given,problem%20to%20an%20eigenvalue%20problem.) sugieren que con la busqueda de un valor propio (eigenvalue) se reduce el tiempo computacional de procesamiento del algoritmo solución. La figura optima corresponde finalmente a la proyeccion ortogonal del vector que representa la figura original en el espacio de "figuras embaldosables" (tilable shapes).
+
+Otras como la de [Kaplan y Salesin](https://www.researchgate.net/publication/2491720_Escherization) proponen la optimización de la parametrización de baldosas isoedricas, las cuales son lo suficientemente flexibles como para abarcar todas las baldosas de Escher y lo suficientemente sencillascomo para ser codificadas y exploradas por un computador.
+
+
 ## Referencias
 
 [Feria de Arte Contemporaneo de Madrid: Paradojas Visuales: Un Engaño para los Sentidos](https://www.art-madrid.com/es/post/paradojas-visuales-para-los-sentidos)
@@ -89,4 +114,7 @@ Belvedere - M.C. Escher
 [Las paradojas visuales de M.C. Escher regresan a Madrid](https://graffica.info/mc-escher-paradojas-visuales/)
 
 [Paradojas lógicas y visuales](http://www.ehu.eus/~mtwmastm/Paradojas_AE_2013.pdf)
+
+[Maximum Eigenvalue Problem for Escherization](https://www.researchgate.net/publication/220397794_Maximum_Eigenvalue_Problem_for_Escherization)
+
 > :ToCPrevNext
