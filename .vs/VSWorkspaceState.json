@@ -1,15 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.github\\workflows",
     "\\docs",
     "\\docs\\img",
-    "\\docs\\md\\docs",
-    "\\docs\\md\\docs\\team",
-    "\\docs\\md\\docs\\workshops",
     "\\docs\\sketches",
     "\\docs\\sketches\\workshop1"
   ],
-  "SelectedNode": "\\docs\\sketches\\workshop1\\asciiArt.js",
+  "SelectedNode": "\\docs\\sketches\\workshop1\\asciiArtImages.js",
   "PreviewInSolutionExplorer": false
 }
