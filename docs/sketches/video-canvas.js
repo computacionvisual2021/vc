@@ -11,9 +11,7 @@ function setup() {
 
 function draw() {
   background(150);
-  image(fingers, 10, 10); // draw the video frame to canvas
-  filter(GRAY);
-  image(fingers, 150, 150); // draw a second copy to canvas
+  image(fingers, 0, 0); // draw the video frame to canvas
 }
 
 function mousePressed() {
