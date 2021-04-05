@@ -115,6 +115,10 @@ Créditos: [P5 photomosaic](https://editor.p5js.org/jnsjknn/sketches/HJU0bQ_fN)
 
 3. La inteligencia artificial puede aportar a la composición y procesamiento de imágenes al poder encontrar por ejemplo la mejor manera de componer un foto-mosaico, la mejor elección de caracteres para ascii art o encontrar la máscara de convolución apropiada para la información solicitada.
 
+4. El ascii art puede significar una técnica de compresión de imágenes y videos en la cual se reduciría significativamente su peso para su envío a necesidad.
+
+5. La mayor aplicación del ascii art se concentra en la operación de equipos computarizados y de comunicación para representar caracteres de texto o identificar dispositivos de control computarizado que trabajan exclusivamente con texto y no tienen capacidad de procesamiento de imágenes.
+
 
 # Referencias y Fuentes
 
