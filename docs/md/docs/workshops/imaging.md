@@ -107,10 +107,9 @@ Créditos: [P5 photomosaic](https://editor.p5js.org/jnsjknn/sketches/HJU0bQ_fN)
 
 3. La realización de foto-mosaicos se ve influenciada por la gama de colores que abarca la biblioteca de imágenes base, por lo cual se debe tener en cuenta que una gran variedad de colores esté disponible para la composición de los foto-mosaicos.
 
-#Trabajo Futuro
+# Trabajo Futuro
 
 1. Las mascaras de convolucion permiten filtrar imágenes para tomar información relevante aplicable a otras diciplinas como reconocimiento de caracteristicas (personas, placas, etc)
-
 
 # Referencias y Fuentes
 
