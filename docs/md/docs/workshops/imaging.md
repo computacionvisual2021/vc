@@ -111,6 +111,11 @@ Créditos: [P5 photomosaic](https://editor.p5js.org/jnsjknn/sketches/HJU0bQ_fN)
 
 1. Las mascaras de convolucion permiten filtrar imágenes para tomar información relevante aplicable a otras diciplinas como reconocimiento de caracteristicas (personas, placas, etc)
 
+2. Son frecuentes hoy día las cámaras fotográficas que incorporan un software destinado a su construcción o aplicaciones en línea como Google Maps que permiten visualizar mapas resultantes de la construcción de foto-mosaicos. 
+
+3. La inteligencia artificial puede aportar a la composición y procesamiento de imágenes al poder encontrar por ejemplo la mejor manera de componer un foto-mosaico, la mejor elección de caracteres para ascii art o encontrar la máscara de convolución apropiada para la información solicitada.
+
+
 # Referencias y Fuentes
 
 [Procesamiento digital de imágenes](https://es.wikipedia.org/wiki/Procesamiento_digital_de_imágenes)
