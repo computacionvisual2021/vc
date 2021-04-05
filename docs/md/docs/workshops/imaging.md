@@ -35,11 +35,14 @@ Un fotomosaico, en el campo de las imágenes y la fotografía, es una imagen que
 
 # Soluci&oacute;n y Resultados
 
-## Escala de grises RGB y LUMA
+## Mascaras de Convoluci&oacute;n & Escala de grises RGB y LUMA
 
-## Mascaras de Convoluci&oacute;n
+> :P5 sketch=/docs/sketches/workshop1/imageConvolutionMasks.js, width=700, height=700
 
-> :P5 sketch=/docs/sketches/workshop1/sketch.js, width=710, height=715
+<br />
+
+> :P5 sketch=/docs/sketches/workshop1/videoConvolutionMasks.js, width=700, height=350
+
 
 ## ASCII Art
 
