@@ -108,7 +108,6 @@ Créditos: [P5 photomosaic](https://editor.p5js.org/jnsjknn/sketches/HJU0bQ_fN)
 
 1. Las mascaras de convolucion permiten filtrar imágenes para tomar información relevante aplicable a otras diciplinas como reconocimiento de caracteristicas (personas, placas, etc)
 
-
 # Referencias y Fuentes
 
 [Procesamiento digital de imágenes](https://es.wikipedia.org/wiki/Procesamiento_digital_de_imágenes)
