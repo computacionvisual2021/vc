@@ -17,6 +17,8 @@ El procesamiento y análisis de imágenes se ha desarrollado en respuesta a prob
 
 # Antecedentes
 
+Una escala de grises de una imagen es aquella en la que el valor de cada píxel es una sola muestra que representa solo una cantidad de luz; es decir, lleva solo información de intensidad. Las imágenes en escala de grises, una especie de monocromo en blanco y negro o gris, se componen exclusivamente de tonos de gris. El contraste varía desde el negro en la intensidad más débil hasta el blanco en la más fuerte. Las imágenes en escala de grises son distintas de las imágenes en blanco y negro puesto.
+
 Las operaciones de filtrado en imágenes en el dominio del espacio se llevan a cabo directamente sobre los píxeles de la imagen, a los cuales se les relaciona un conjunto de pixeles próximos con el objetivo de obtener información útil. Los llamados filtros lineales son los que cumplen el hecho de que el resultado de cada pixel se obtiene como combinación lineal de sus vecinos. Para aplicar un filtro lineal multiplicamos el entorno de cada pixel (submatriz NxN) por una máscara (que contiene los pesos de cada pixel del entorno con que se pondera la media), la media ponderada será el nuevo valor del pixel cuyo entorno operábamos. Para realizar un filtrado en el dominio del espacio se realiza una convolución (barrido) del núcleo sobre la imagen. Para ello se sigue el Teorema de Convolución en el espacio; cada píxel de la nueva imagen se obtiene mediante el sumatorio de la multiplicación del núcleo por los píxeles contiguos:
 
 > :Formula align=center
@@ -94,9 +96,17 @@ Créditos: [P5 photomosaic](https://editor.p5js.org/jnsjknn/sketches/HJU0bQ_fN)
 
 > :P5 sketch=/docs/sketches/workshop1/photomosaic2.js, width=420, height=420
 
-# Conclusiones y Trabajo Futuro
+# Conclusiones 
 
-1. 
+1. Para la aplicación de filtros en imágenes y videos se usa la operación de convolución.
+
+2. La densidad de los caracteres para la representación gráfica de ascii art influye determinantemente en el resultado del proceso, haciendo la elección de los caracteres crucial para un buen desempeño del algoritmo de codificación.
+
+3. La realización de foto-mosaicos se ve influenciada por la gama de colores que abarca la biblioteca de imágenes base, por lo cual se debe tener en cuenta que una gran variedad de colores esté disponible para la composición de los foto-mosaicos.
+
+#Trabajo Futuro
+
+1. Las mascaras de convolucion permiten filtrar imágenes para tomar información relevante aplicable a otras diciplinas como reconocimiento de caracteristicas (personas, placas, etc)
 
 
 # Referencias y Fuentes
