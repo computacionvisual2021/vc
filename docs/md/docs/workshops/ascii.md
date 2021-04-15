@@ -19,29 +19,40 @@ El ASCII Art es una t&eacute;cnica de dise&ntilde;o que consiste en la represent
 
 # Soluci&oacute;n y Resultados
 
-```
-function draw() {
-    background(0);
-    
-    cyclic_t = millis() * 0.0002 % images.length;
-    
-    gfx.image(images[floor(cyclic_t)], 0, 0, gfx.width, gfx.height);
-    
-    gfx.filter(POSTERIZE, 3);
-   
-    ascii_arr = myAsciiArt.convert(gfx);
-    
-    myAsciiArt.typeArray2d(ascii_arr, this);
-    
-    tint(255, pow(1.0 - (cyclic_t % 1.0), 4) * 255);
-    image(images[floor(cyclic_t)], 0, 0, width, height);
-    noTint();
-}
+> :Tabs
+> > :Tab title= Visualizacion Imagen
+> > 
+> > > :P5 sketch=/docs/sketches/workshop1/asciiArtImages.js, width=800, height=600
+>
+> > :Tab title= Visualizacion Video
+> > 
+> > > :P5 sketch=/docs/sketches/workshop1/asciiArtVideos.js, width=650, height=520
+>
+> > :Tab title= Instrucciones
+> > 
+>
+> > :Tab title= Codigo
+> >
+> > ``` js | asciiArtImages.js
+> > function draw() {
+> >     background(0);
+> >     
+> >     cyclic_t = millis() * 0.0002 % images.length;
+> >     
+> >    gfx.image(images[floor(cyclic_t)], 0, 0, gfx.width, gfx.height);
+> >     
+> >     gfx.filter(POSTERIZE, 3);
+> >    
+> >     ascii_arr = myAsciiArt.convert(gfx);
+> >     
+> >     myAsciiArt.typeArray2d(ascii_arr, this);
+> >     
+> >     tint(255, pow(1.0 - (cyclic_t % 1.0), 4) * 255);
+> >     image(images[floor(cyclic_t)], 0, 0, width, height);
+> >     noTint();
+> > }
+> > 
+> > ```
+> > 
 
-```
 Creditos de: [Libreria asciiart](https://www.tetoki.eu/asciiart/asciiart_stillimage.html)
-
-
-> :P5 sketch=/docs/sketches/workshop1/asciiArtImages.js, width=800, height=600
-
-> :P5 sketch=/docs/sketches/workshop1/asciiArtVideos.js, width=650, height=520
