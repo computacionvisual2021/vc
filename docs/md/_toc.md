@@ -7,7 +7,7 @@
 > > > :Collapse label=Software
 > > > 
 > > > [Mascaras de Convolución y Escala Grises](/docs/workshops/imaging)
-> > > [Ascii Art](/docs/workshops/imaging)
+> > > [Ascii Art](/docs/workshops/ascii)
 > > > [Foto-Mosaico](/docs/workshops/imaging)
 > > > [Conclusiones y Trabajo Futuro](/docs/workshops/imaging)
 > > 
