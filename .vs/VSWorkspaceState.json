@@ -2,7 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\docs",
-    "\\docs\\img",
+    "\\docs\\md",
+    "\\docs\\md\\docs",
     "\\docs\\sketches",
     "\\docs\\sketches\\workshop1"
   ],

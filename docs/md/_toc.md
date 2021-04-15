@@ -4,8 +4,16 @@
 > 
 > > :Collapse label=Imaging & Video
 > >
-> > [Software](/docs/workshops/imaging)
-> > [Hardware](/docs/workshops/hardware)
+> > > :Collapse label=Software
+> > > 
+> > > [Mascaras de Convolución y Escala Grises](/docs/workshops/imaging)
+> > > [Ascii Art](/docs/workshops/imaging)
+> > > [Foto-Mosaico](/docs/workshops/imaging)
+> > > [Conclusiones y Trabajo Futuro](/docs/workshops/imaging)
+> > 
+> > > :Collapse label=Hardware
+> > >
+> > > [Hardware](/docs/workshops/hardware)
 > 
 > [Rendering](/docs/workshops/rendering)
 > [Algovis](/docs/workshops/algovis)
