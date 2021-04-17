@@ -8,8 +8,8 @@
 > > > 
 > > > [Mascaras de Convolución y Escala Grises](/docs/workshops/imaging)
 > > > [Ascii Art](/docs/workshops/ascii)
-> > > [Foto-Mosaico](/docs/workshops/imaging)
-> > > [Conclusiones y Trabajo Futuro](/docs/workshops/imaging)
+> > > [Foto-Mosaico](/docs/workshops/photomosaic)
+> > > [Conclusiones y Trabajo Futuro](/docs/workshops/conclusion)
 > > 
 > > > :Collapse label=Hardware
 > > >
