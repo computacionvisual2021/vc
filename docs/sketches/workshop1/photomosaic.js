@@ -1,4 +1,4 @@
-var sclDiv = 60;
+var sclDiv = 70;
 var w, h;
 var imgAmount = 29;
 
