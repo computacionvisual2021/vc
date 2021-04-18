@@ -1,5 +1,10 @@
 <h1 align="center">Photo Mosaic</h1>
 
+# Antecedentes
+
+Un fotomosaico, en el campo de las imágenes y la fotografía, es una imagen que ha sido dividida en secciones rectangulares (usualmente del mismo tamaño), tal como es compuesto un mosaico tradicional, con la característica de que cada elemento del mosaico es reemplazado por otra fotografía con colores promedios apropiados al elemento de la imagen original. Robert Silvers es el pionero de los fotomosaicos a nivel mundial. Silvers inventó su arte mientras todavía era un estudiante en el MIT (1995). Sus obras intrincadas brindan una perspectiva óptica única y han ganado en el mundo gran aceptación y aclamación, ha creado grandes obras que ya forman parte de famosas colecciones como lo son: Courtage de Axa, Coca Cola, CNN, Disney, Fortune Magazine, IBM, Lucasfilm Ltd
+
+
 # Solución y Resultados
 
 > :Tabs

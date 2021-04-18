@@ -6,10 +6,11 @@
 > >
 > > > :Collapse label=Software
 > > > 
-> > > [Mascaras de Convolución y Escala Grises](/docs/workshops/imaging)
+> > > [Introducción](/docs/workshops/imagingIntro)
+> > > [Mascaras de Convolución y Escala Grises](/docs/workshops/maskRGBLUMA)
 > > > [Ascii Art](/docs/workshops/ascii)
 > > > [Foto-Mosaico](/docs/workshops/photomosaic)
-> > > [Conclusiones y Trabajo Futuro](/docs/workshops/conclusion)
+> > > [Conclusiones y Trabajo Futuro](/docs/workshops/imagingConclusion)
 > > 
 > > > :Collapse label=Hardware
 > > >
