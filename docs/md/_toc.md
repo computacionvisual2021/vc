@@ -14,12 +14,20 @@
 > > 
 > > > :Collapse label=Hardware
 > > >
-> > > [Hardware](/docs/workshops/hardware)
-> 
-> [Rendering](/docs/workshops/rendering)
-> [Algovis](/docs/workshops/algovis)
-> [Computer Graphics](/docs/workshops/cg)
-> [HCI](/docs/workshops/hci)
+> > > [Introducción](/docs/workshops/hardware)
+> > > [RGB y Luma](/docs/workshops/imagingIntro)
+> > > [Mascaras de Convolución](/docs/workshops/maskRGBLUMA)
+> > > [Ascii Art](/docs/workshops/ascii)
+> > > [Conclusiones y Trabajo Futuro](/docs/workshops/imagingConclusion)
+>
+> > :Collapse label=Rendering
+> >
+> > [Introducción](/docs/workshops/rendering)
+> > [Algoritmo Visibilidad](/docs/workshops/rendering)
+> > [Iluminación Global](/docs/workshops/rendering)
+> > [Algoritmo Computación Visual](/docs/workshops/rendering)
+> > [Conclusiones y Trabajo Futuro](/docs/workshops/imagingConclusion)
+>
 
 > :Collapse label=P5 Code Snippets
 > 
@@ -36,4 +44,4 @@
 > 
 > [Liseth Arévalo](/docs/team/LisethArevalo)
 > [Diana Guarín](/docs/team/DianaGuarin)
-> [Miguel Medellín](/docs/team/MiguelMedellin)
+
