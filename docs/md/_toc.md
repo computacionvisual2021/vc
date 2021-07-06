@@ -14,19 +14,18 @@
 > > 
 > > > :Collapse label=Hardware
 > > >
-> > > [Introducción](/docs/workshops/hardware)
-> > > [RGB y Luma](/docs/workshops/imagingIntro)
-> > > [Mascaras de Convolución](/docs/workshops/maskRGBLUMA)
-> > > [Ascii Art](/docs/workshops/ascii)
-> > > [Conclusiones y Trabajo Futuro](/docs/workshops/imagingConclusion)
+> > > [Introducción](/docs/workshops/hardwareIntro)
+> > > [RGB y Luma](/docs/workshops/hardwareGrises)
+> > > [Mascaras de Convolución](/docs/workshops/hardwareMascaras)
+> > > [Ascii Art](/docs/workshops/hardwareAscii)
+> > > [Conclusiones y Trabajo Futuro](/docs/workshops/hardwareConclusion)
 >
 > > :Collapse label=Rendering
 > >
-> > [Introducción](/docs/workshops/rendering)
-> > [Algoritmo Visibilidad](/docs/workshops/rendering)
-> > [Iluminación Global](/docs/workshops/rendering)
-> > [Algoritmo Computación Visual](/docs/workshops/rendering)
-> > [Conclusiones y Trabajo Futuro](/docs/workshops/imagingConclusion)
+> > [Introducción](/docs/workshops/renderingIntro)
+> > [Iluminación Global](/docs/workshops/renderingIluminacion)
+> > [Algoritmo Rasterización](/docs/workshops/renderingRasterizacion)
+> > [Conclusiones y Trabajo Futuro](/docs/workshops/renderingConclusion)
 >
 
 > :Collapse label=P5 Code Snippets
