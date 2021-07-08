@@ -11,12 +11,12 @@ let angle = 0;
 let gray = 0;
 
 function preload() {
-	img = loadImage('luffy.png');
+	img = loadImage("/vc/docs/img/luffy.png");
 	video = createVideo('');
 	video.hide();
 	// Cargar los shaders
-	theShader = loadShader('texture.vert', 'texture.frag');
-	theShaderVideo = loadShader('texture.vert', 'texture.frag');
+	theShader = loadShader("/vc/docs/sketches/workshop2/texture.vert", "/vc/docs/sketches/workshop2/texture.frag");
+	theShaderVideo = loadShader("/vc/docs/sketches/workshop2/texture.vert", "/vc/docs/sketches/workshop2/texture.frag");
 
 }
 
