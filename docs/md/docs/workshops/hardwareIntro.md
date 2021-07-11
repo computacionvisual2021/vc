@@ -1,5 +1,5 @@
 
-<h1 align="center">Procesamiento de Imagen y Video</h1>
+<h1 align="center">Procesamiento de Imagen y Video por Hardware</h1>
 
 # Planteamiento del Problema
 
