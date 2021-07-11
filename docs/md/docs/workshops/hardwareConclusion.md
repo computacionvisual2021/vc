@@ -20,12 +20,10 @@
 
 <h1 align="center">Referencias y Fuentes</h1>
 
-[Procesamiento digital de imágenes](https://es.wikipedia.org/wiki/Procesamiento_digital_de_imágenes)
+[Procesamiento digital de imágenes en la tarjeta gráfica](https://www.stemmer-imaging.com/en/technical-tips/image-processing-on-the-graphics-card/)
 
 [Filtrado de imágenes](http://www.ub.edu/pa1/node/filtrado)
 
 [ASCII art](https://en.wikipedia.org/wiki/ASCII_art)
 
 [Ascii art library](https://www.tetoki.eu/asciiart/)
-
-[P5 photomosaic](https://editor.p5js.org/jnsjknn/sketches/HJU0bQ_fN)

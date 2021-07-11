@@ -1,14 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\.codedoc\\components",
     "\\docs",
-    "\\docs\\md",
-    "\\docs\\md\\docs",
-    "\\docs\\md\\docs\\workshops",
     "\\docs\\sketches",
-    "\\docs\\sketches\\workshop1",
     "\\docs\\sketches\\workshop2"
   ],
-  "SelectedNode": "\\docs\\md\\docs\\workshops\\hardwareIntro.md",
+  "SelectedNode": "\\.codedoc",
   "PreviewInSolutionExplorer": false
 }
