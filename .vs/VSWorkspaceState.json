@@ -1,11 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.codedoc\\components",
     "\\docs",
+    "\\docs\\md",
+    "\\docs\\md\\docs",
     "\\docs\\sketches",
-    "\\docs\\sketches\\workshop2"
+    "\\docs\\sketches\\workshop2",
+    "\\docs\\sketches\\workshop3"
   ],
-  "SelectedNode": "\\.codedoc",
+  "SelectedNode": "\\docs\\sketches\\workshop3\\rasterization.js",
   "PreviewInSolutionExplorer": false
 }

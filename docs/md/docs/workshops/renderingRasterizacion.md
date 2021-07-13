@@ -3,7 +3,7 @@
 <script src="../sketches/workshop1/p5.dom.min.js" /></script>
 <script src="../sketches/workshop1/p5.sound.min.js" /></script>
 
-<h1 align="center">Ascii Art</h1>
+<h1 align="center">Rasterización con Coordenadas Baricéntricas</h1>
 
 # Antecedentes
 
@@ -12,13 +12,13 @@ El ASCII Art es una t&eacute;cnica de dise&ntilde;o que consiste en la represent
 # Soluci&oacute;n y Resultados
 
 > :Tabs
-> > :Tab title= Visualizacion Imagen
+> > :Tab title= Coordenadas Baricentricas
 > > 
-> > > :P5 sketch=/docs/sketches/workshop1/asciiArtImages.js, width=800, height=600
+> > > :P5 sketch=/docs/sketches/workshop3/rasterizationBayCoord.js, width=500, height=500
 >
-> > :Tab title= Visualizacion Video
+> > :Tab title= Rasterizacion Completa
 > > 
-> > > :P5 sketch=/docs/sketches/workshop1/asciiArtVideos.js, width=650, height=520
+> > > :P5 sketch=/docs/sketches/workshop3/rasterizationFull.js, width=500, height=500
 >
 > > :Tab title= Instrucciones
 > > 
@@ -60,4 +60,11 @@ El ASCII Art es una t&eacute;cnica de dise&ntilde;o que consiste en la represent
 > > ```
 > > 
 
-Creditos de: [Libreria asciiart](https://www.tetoki.eu/asciiart/asciiart_stillimage.html)
+Creditos de: 
+
+[Razterization Definicion](https://elcodigografico.wordpress.com/2014/03/29/coordenadas-baricentricas-en-triangulos/)
+
+[Razterization Tutorial](https://github.com/JoseMolano/CompVisualProy)
+
+
+

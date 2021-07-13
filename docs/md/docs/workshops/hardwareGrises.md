@@ -9,20 +9,19 @@
 
 Pendienteeeeee
 
+
 # Soluci&oacute;n y Resultados
 
 > :Tabs
 > > :Tab title= Visualizacion Imagen
 > > 
-> > > :P5 sketch=/docs/sketches/workshop2/RGBLuma.js, width=800, height=600
+> > > :P5 sketch=/docs/sketches/workshop3/RGBLumaImagen.js, width=800, height=600
 > > >
-> > > <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
-> > > <script type="text/javascript" src="/docs/sketches/workshop2/RGBLuma.js"></script>
->
+> >
 >
 > > :Tab title= Visualizacion Video
 > > 
-> > > :P5 sketch=/docs/sketches/workshop1/asciiArtVideos.js, width=650, height=520
+> > > :P5 sketch=/docs/sketches/workshop1/, width=650, height=520
 >
 > > :Tab title= Instrucciones
 > > 
