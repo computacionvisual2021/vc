@@ -13,15 +13,13 @@ Pendienteeeeee
 # Soluci&oacute;n y Resultados
 
 > :Tabs
-> > :Tab title= Visualizacion Imagen
+> > :Tab title= Imagen RGB y Luma
 > > 
-> > > :P5 sketch=/docs/sketches/workshop3/RGBLumaImagen.js, width=800, height=600
-> > >
-> >
->
-> > :Tab title= Visualizacion Video
+> > > :P5 sketch=/docs/sketches/workshop2/RGBLumaImagen.js, width=800, height=600
+> 
+> > :Tab title= Video Luma
 > > 
-> > > :P5 sketch=/docs/sketches/workshop1/, width=650, height=520
+> > > :P5 sketch=/docs/sketches/workshop2/RGBLumaVideo.js, width=650, height=520
 >
 > > :Tab title= Instrucciones
 > > 
