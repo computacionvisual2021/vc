@@ -15,47 +15,124 @@ Pendienteeeeee
 > :Tabs
 > > :Tab title= Imagen RGB y Luma
 > > 
-> > > :P5 sketch=/docs/sketches/workshop2/RGBLumaImagen.js, width=800, height=600
+> > > :P5 sketch=/docs/sketches/workshop2/RGBLumaImagen.js, width=1000, height=410
 > 
-> > :Tab title= Video Luma
+> > :Tab title= Video RGB y Luma
 > > 
-> > > :P5 sketch=/docs/sketches/workshop2/RGBLumaVideo.js, width=650, height=520
+> > > :P5 sketch=/docs/sketches/workshop2/RGBLumaVideo.js, width=720, height=400
 >
 > > :Tab title= Instrucciones
 > > 
-> > 1. Las imagenes a convertir estan precargadas en el arreglo images[]
+> > 1. Precargar Shader para imagen y video con el vertex y fragment shader.
 > > 
-> > 2. Se calcula el indice de la imagen a convertir en cyclic_t
+> > 2. Crear buffer gráfico de WEBGL.
 > > 
-> > 3. Se carga la imagen en el objeto gfx para hacer la posterizaci&oacute;n
+> > 3. Crear el shader a partir del precargado.
 > > 
-> > 4. Se hace la posterizaci&oacute;n con gfx.filter(POSTERIZE, 3) para atenuar los cambios de color en la imagen
+> > 4. Pasar datos de imagen/video y tecla de control al Fragment Shader.
 > > 
-> > 5. Se convierte la imagen con la librer&iacute;a y se guarda en ascii_arr como un arreglo 2d de caracteres ascii.
+> > 5. El fragment shader carga la textura (ya sea video o imagen).
 > > 
-> > 6. Se imprime el arreglo en el canvas con la funci&oacute;n typeArray2d
+> > 6. Calcula el valor en escala de grises a representar según el comando recibido en la tecla de control.
 > > 
-> > 7. Finalmente se muestra la imagen original en transicion a la convertida 
+> > 7. Renderizar el valor de color deseado y mostrar en pantalla .
 >
-> > :Tab title= Codigo
+> > :Tab title= Codigo Imagen
 > >
-> > ``` js | asciiArtImages.js
-> > function draw() {
-> >     background(0);
-> >     
-> >     cyclic_t = millis() * 0.0002 % images.length;
-> >     
-> >    gfx.image(images[floor(cyclic_t)], 0, 0, gfx.width, gfx.height);
-> >     
-> >     gfx.filter(POSTERIZE, 3);
-> >    
-> >     ascii_arr = myAsciiArt.convert(gfx);
-> >     
-> >     myAsciiArt.typeArray2d(ascii_arr, this);
-> >     
-> >     tint(255, pow(1.0 - (cyclic_t % 1.0), 4) * 255);
-> >     image(images[floor(cyclic_t)], 0, 0, width, height);
-> >     noTint();
+> > ``` glsl | texture.frag
+> > // Funcion para convertir un color a escala de grises
+> > float grayscale(vec3 color) {
+> >   float lightness;
+> >   // Si la tecla de control es 1 se calcula la luminosidad a partir del RGB
+> >   if (u_key==1){
+> > 		float I=(color.r + color.g + color.b) / 3.0; // Promedio de los tres componentes
+> > 		lightness = I;
+> > 	} else if (u_key==2){
+> >   // Si la tecla de control es 2 se calcula el valor luma
+> >   // Promedio ponderado de RGB con corrección gamma (Luma)
+> > 		float Y= dot(color, vec3(0.299, 0.587, 0.114)); // SDTV
+> > 		lightness = Y;
+> > 	}
+> >   return lightness;
+> > }
+> > 
+> > void main() {
+> >   vec2 uv = vTexCoord;
+> > 
+> >   //Invierte la posicion de la cordenada  para que la imagen no quede al reves
+> >   uv.y = 1.0 - uv.y;
+> > 
+> >   vec4 tex = texture2D(u_img, uv);
+> >   // Calculo de escala de grises
+> >   float gray =grayscale(tex.rgb);
+> >   
+> >   float threshR = gray ;
+> >   float threshG = gray ;
+> >   float threshB = gray ;
+> > 
+> >   // Si la tecla de control es 0 se muestra la imagen original
+> >   if (u_key==0){
+> >     threshR = tex.r ;
+> >     threshG = tex.g ;
+> >     threshB = tex.b ;
+> >   }
+> >   vec3 thresh = vec3(threshR, threshG, threshB);
+> > 
+> >   // Se renderiza la salida
+> >   gl_FragColor = vec4(thresh, 1.0);
+> > }
+> > 
+> > ```
+> > 
+>
+> > :Tab title= Codigo Video
+> >
+> > ``` glsl | webcam.frag
+> > // Funcion para calculo de valor Luma de un color
+> > float luma(vec3 color) {
+> >   return dot(color, vec3(0.299, 0.587, 0.114));
+> > }
+> > 
+> > // Funcion para calculo de valor luminocidad a partir de un color RGB
+> > float grayRGB(vec3 color) {
+> >   float lightness=(color.r + color.g + color.b) / 3.0; // Promedio de los tres componentes
+> >   return lightness;
+> > }
+> > void main() {
+> > 
+> >   vec2 uv = vTexCoord;
+> >   uv = 1.0 - uv;
+> > 
+> >   vec4 tex = texture2D(tex0, uv);
+> > 
+> >    float gray;
+> >    //Dejar valores de color originales desde el inicio
+> > 
+> >    float threshR = tex.r ;
+> >    float threshG = tex.g ;
+> >    float threshB = tex.b ;
+> >   
+> >   // Si la tecla de control es 1 se calcula la luminosidad a partir del RGB
+> >   if (u_key==1){
+> > 
+> >     gray =grayRGB(tex.rgb);
+> > 
+> >     threshR = gray ;
+> >     threshG = gray ;
+> >     threshB = gray ;
+> >   }else if (u_key==2){
+> >     // Si la tecla de control es 2 se calcula el valor luma 
+> >     gray = luma(tex.rgb);
+> > 
+> >     threshR = gray ;
+> >     threshG = gray ;
+> >     threshB = gray ;
+> >   }
+> > 
+> >   vec3 thresh = vec3(threshR, threshG, threshB);
+> > 
+> >   // Se renderiza la salida
+> >   gl_FragColor = vec4(thresh, 1.0);
 > > }
 > > 
 > > ```
