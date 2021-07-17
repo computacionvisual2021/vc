@@ -40,6 +40,7 @@ Workshops [blog posts](https://en.wikipedia.org/wiki/Edublog)-like reports produ
 
 ## Hacking
 
+The webpage is to be developed in _markdown_ ([CommonMark](https://spec.commonmark.org/0.29/) and [GitHub Flavored Markdown](https://github.github.com/gfm/)) at the `main` branch of your `https://github.com/<gh-username>/vc` repo using [codedoc](https://codedoc.cc/), and the resulting webpage served from the `gh-pages` branch of that repo at: `https://<gh-username>.github.io/vc/`. Refer to the [gh-pages](https://pages.github.com/) documentation for details.
 
 
 > :ToCPrevNext
