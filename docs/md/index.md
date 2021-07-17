@@ -7,20 +7,53 @@ Welcome to the [UN / DISI](http://www.ingenieria.unal.edu.co/dependencias/depart
 To study the process of creation and manipulation of a digital image of a modern visual application, using current hardware.
 
 ## Integrantes
+> :Card
+>
+> ![Card Hero](https://i.etsystatic.com/14457190/r/il/3cb8ff/1676245710/il_570xN.1676245710_ba0u.jpg)
+>
+> **Liseth Arevalo**
+> Banksy is an anonymous England-based street artist, vandal, political activist, and film director, active since the 1990s. 
+> > :Buttons
+> > > :Button label=Wiki, url=https://en.wikipedia.org/wiki/Banksy
 
-[Active-learning](https://en.wikipedia.org/wiki/Active_learning) using [free-software](https://en.wikipedia.org/wiki/Free_software) to develop:
+> :Card
+>
+> ![Card Hero](https://i.etsystatic.com/14457190/r/il/3cb8ff/1676245710/il_570xN.1676245710_ba0u.jpg)
+>
+> **Diana Guarin**
+> Banksy is an anonymous England-based street artist, vandal, political activist, and film director, active since the 1990s. 
+> > :Buttons
+> > > :Button label=Wiki, url=https://en.wikipedia.org/wiki/Banksy
 
-* [Slides](https://github.com/orgs/VisualComputing/teams/presentations/repositories).
-* [nub](https://github.com/VisualComputing/nub) and [p5.nub.js](https://github.com/VisualComputing/p5.nub.js).
-* [p5.quadrille.js](https://github.com/objetos/p5.quadrille.js).
 
 ## Workshops
 
-Workshops [blog posts](https://en.wikipedia.org/wiki/Edublog)-like reports produced with [codedoc](https://codedoc.cc/) and [p5.js](https://p5js.org/) and having a basic research structure:
-  * Problem statement
-  * Background
-  * Code (solution) & results
-  * Conclusions & future work
+> :Card
+>
+> ![Card Hero](https://i.etsystatic.com/14457190/r/il/3cb8ff/1676245710/il_570xN.1676245710_ba0u.jpg)
+>
+> **Imaging & Video - Software**
+> Banksy is an anonymous England-based street artist, vandal, political activist, and film director, active since the 1990s. 
+> > :Buttons
+> > > :Button label=Wiki, url=https://en.wikipedia.org/wiki/Banksy
+
+> :Card
+>
+> ![Card Hero](https://i.etsystatic.com/14457190/r/il/3cb8ff/1676245710/il_570xN.1676245710_ba0u.jpg)
+>
+> **Imaging & Video - Hardware**
+> Banksy is an anonymous England-based street artist, vandal, political activist, and film director, active since the 1990s. 
+> > :Buttons
+> > > :Button label=Wiki, url=https://en.wikipedia.org/wiki/Banksy
+
+> :Card
+>
+> ![Card Hero](https://i.etsystatic.com/14457190/r/il/3cb8ff/1676245710/il_570xN.1676245710_ba0u.jpg)
+>
+> **Rendering**
+> Banksy is an anonymous England-based street artist, vandal, political activist, and film director, active since the 1990s. 
+> > :Buttons
+> > > :Button label=Wiki, url=https://en.wikipedia.org/wiki/Banksy
 
 ## Outline
 

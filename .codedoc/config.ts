@@ -3,6 +3,7 @@ import { formulaPlugin } from '@codedoc/core/components';
 import { theme } from './theme';
 import { P5 } from './components/p5';       // --> import the card component itself
 import { input } from './components/input'; // --> import the card component itself
+import { Card } from './components/card';      // --> import the card component itself
 
 export const config = configuration({
   theme,
@@ -38,6 +39,7 @@ export const config = configuration({
       ...DefaultMarkdownCustomComponents,      // --> make sure to add default markdown components. otherwise the default components will not work!
       P5,                                      // --> add our own p5 component
       input,                                   // --> add our own p5 component
+      Card,
     }
   },
   plugins: [
