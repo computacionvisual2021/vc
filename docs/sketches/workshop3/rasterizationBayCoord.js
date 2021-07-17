@@ -1,5 +1,5 @@
 ﻿
-
+//Declaracion de variables para las coordenadas
 var alpha;
 
 var beta;
@@ -12,18 +12,7 @@ var betaS;
 
 var gammaS;
 
-function barycentric() {
-    alpha = 0.0;
-    beta = 0.0;
-    gamma = 0.0;
-}
-
-function barycentric(A, B, C) {
-    alpha = A;
-    beta = B;
-    gamma = C;
-}
-
+//Definición de coordenadas baricentricas a partir de tres puntos de un triangulo (a, b, c) y un punto arbitrario p=(x,y)
 function barycentric(ax, ay, bx, by, cx, cy, x, y) {
     var d = (by - cy) * (ax - cx) + (cx - bx) * (ay - cy);
     alpha = ((by - cy) * (x - cx) + (cx - bx) * (y - cy)) / d;
@@ -34,11 +23,9 @@ function barycentric(ax, ay, bx, by, cx, cy, x, y) {
     gammaS = nf(gamma, 1, 2);
 }
 
-function interpolate(a, b, c) {
-    return a * alpha + b * beta + c * gamma;
-}
-
-
+// Comprobación de si un punto (x, y) dado esta dentro del área que cubre un triangulo con vertices a, b, c
+// 1. Calcula coordenadas baricentricas del punto p
+// 2. Comprueba si los valores de alpha, beta y gamma tienen valores entre 0 y 1, es decir demostrando que p está dentro del triangulo
 function inside_triangle(ax, ay, bx, by, cx, cy, x, y) {
     var d = (by - cy) * (ax - cx) + (cx - bx) * (ay - cy);
     var alpha = ((by - cy) * (x - cx) + (cx - bx) * (y - cy)) / d;
@@ -47,6 +34,7 @@ function inside_triangle(ax, ay, bx, by, cx, cy, x, y) {
     return !(alpha < 0 || alpha > 1 || beta < 0 || beta > 1 || gamma < 0 || gamma > 1);
 }
 
+// Declaracion de variables para definir los tres puntos que conforman el triangulo
 var ax;
 
 var ay;
@@ -58,7 +46,7 @@ var by;
 var cx;
 
 var cy;
-
+// Setup del canvas con la inicialización de variables y la creación del canvas
 function setup() {
     alpha = 0;
     beta = 0;
@@ -72,9 +60,11 @@ function setup() {
     by = 0;
     cx = 0;
     cy = 0;
+    //Creación del canvas
     createCanvas(500, 500);
-    textSize(20);
+    //Definición del modo de color y escala de este
     colorMode(RGB, 255);
+    //Coordenadas del triangulo inicial
     ax = width / 4;
     ay = 50;
     bx = width - 11;
@@ -84,14 +74,21 @@ function setup() {
 }
 
 function draw() {
+    //Poner fondo blanco en el canvas
     background(255);
+    //Grosor del trazado 
     strokeWeight(1);
+    //Tazar con color negro
     stroke(0);
+    //Rellenar con color negro el triangulo actual
     fill(1);
     triangle(ax, ay, bx, by, cx, cy);
+    //Calcular coordenadas baricentricas
     barycentric(ax, ay, bx, by, cx, cy, mouseX, mouseY);
+    //Estilizar tamaño de texto y alineación del mismo en el canvas
     textSize(20);
-    textAlign(LEFT,CENTER);
+    textAlign(LEFT, CENTER);
+    //Mostrar en pantalla los valores calculados de alpha, beta y gamma
     fill(163, 217, 255);
     text("λ0: " + alphaS, 10, 60);
     fill(220, 247, 99);
@@ -100,6 +97,7 @@ function draw() {
     text("λ2: " + gammaS, 10, 100);
     
     strokeWeight(2);
+    //Si el mouse está en el area dentro del triangulo llenar los subtriangulos que se forman entre el mouse y los vertices con el color respectivo
     if (inside_triangle(ax, ay, bx, by, cx, cy, mouseX, mouseY)) {
         stroke(0, 0, 0);
         fill(239, 199, 194);
@@ -111,7 +109,10 @@ function draw() {
     } else {
         stroke(1, 0, 0);
     }
+//Marcador de punto en la ubicación del cursor en el canvas
     point(mouseX, mouseY);
+
+//Cambio de coordenadas de los vertices del triangulo segun el click con los botones central, derecho e izquierdo
     if (mouseIsPressed) {
         if (mouseButton == LEFT) {
             ax = mouseX;
