@@ -13,10 +13,10 @@ function setup() {
     // shaders require WEBGL mode to work
     createCanvas(710, 400, WEBGL);
     noStroke();
-
+    //Crea una aptura de video instantanea 
     cam = createCapture(VIDEO);
     cam.size(710, 400);
-
+    //Esconde la captura para solo mostrar el renderizado final
     cam.hide();
 }
 
