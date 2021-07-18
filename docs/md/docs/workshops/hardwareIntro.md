@@ -9,3 +9,4 @@ Para observar un mejor procesamiento por parte del grán abanico de técnicas exis
 
 Se propone así el uso de la unidad de procesamiento gráfico GPU por sus siglas en inglés, ya que está optimizada los algoritmos de procesamiento de imagenes y actualmente poseen varios procesadores para diferentes tareas. El como realizar ejecución de computación en la GPU mediate el lenguaje GLSL (OpenGL Shading Language) basado en C (en su sintaxis) es el centro de estudio del presente taller. 
 
+> :ToCPrevNext

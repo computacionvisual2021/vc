@@ -9,3 +9,4 @@ Para observar parte del grán abanico de técnicas existentes, se estudia programá
 
 El procesamiento y análisis de imágenes se ha desarrollado en respuesta a problemas concernientes a las mismas como su digitalización y codificación, interpretación de su contenido o segmentación. Diferentes algoritmos  de  procesamiento  de  imágenes  destinados  a  resaltar,  agudizar y/o  contrastar  determinados  aspectos  de  la  imagen, o aquellos que ayudan  a  eliminar efectos   no   deseados   sobre   ellas, han hecho posible la extracción de  mediciones,  datos  o  información  contenida  en  una  imagen. Esto ha traído con el un sin número de aplicaciónes en el campo de la tecnología, las comunicaciones, el arte, o incluso en la medicina como lo es la utilización de imágenes radiográfícas para diagnóstico clínico.
 
+> :ToCPrevNext

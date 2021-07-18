@@ -23,3 +23,5 @@
 [Renderizado](https://es.wikipedia.org/wiki/Renderización)
 
 [Renderizado con CPU y GPU](https://www.iscarnet.com/2018/06/renderizar-con-gpu-cpu-o-ambos/)
+
+> :ToCPrevNext

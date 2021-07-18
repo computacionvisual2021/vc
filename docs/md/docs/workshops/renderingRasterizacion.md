@@ -187,4 +187,4 @@ Particularmente se considera la industria del entretenimiento de videojuegos com
 [Razterization Aplications](https://www.ecured.cu/Rasterización)
 
 
-
+> :ToCPrevNext

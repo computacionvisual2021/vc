@@ -193,3 +193,5 @@ Por su parte la escala de grises ayuda a la comparaci&oacute;n de la luminosidad
 [RGB Space Image](https://www.pngwing.com/es/free-png-sndev)
 
 [Sintesis Digital de Color Utilizando Tonos de Gris ](https://ninive.uaslp.mx/xmlui/bitstream/handle/i/2264/MCA1SDC00901.pdf?sequence=1&isAllowed=y#:~:text=La%20escala%20de%20grises%20se,gradaciones%20de%20este%20color%20puro.)
+
+> :ToCPrevNext

@@ -4,76 +4,66 @@ Welcome to the [UN / DISI](http://www.ingenieria.unal.edu.co/dependencias/depart
 
 ## Objetivos
 
-To study the process of creation and manipulation of a digital image of a modern visual application, using current hardware.
+Tener un acercamiento al proceso de la manipulaci&oacute;n de imagenes y video por medio de la implementaci&oacute;n, an&aacute;lisis e indagaci&oacute;n de filiales de la computaci&oacute;n gr&aacute;fica. 
 
 ## Integrantes
 > :Card
 >
-> ![Card Hero](https://i.etsystatic.com/14457190/r/il/3cb8ff/1676245710/il_570xN.1676245710_ba0u.jpg)
+> ![Liseth Arevalo](https://i.ibb.co/QbV64MR/fotoperfil.jpg)
 >
 > **Liseth Arevalo**
-> Banksy is an anonymous England-based street artist, vandal, political activist, and film director, active since the 1990s. 
+> Estudiante de Ingenier&iacute;a de Sistemas y Computaci&oacute;n, profesional en Ingenier&iacute;a Qu&iacute;mica. Intereses en Ciberseguridad y Mercados Financieros.
 > > :Buttons
-> > > :Button label=Wiki, url=https://en.wikipedia.org/wiki/Banksy
+> > > :Button label=Presentaci&oacute;n, url=/docs/team/LisethArevalo
 
 > :Card
 >
-> ![Card Hero](https://i.etsystatic.com/14457190/r/il/3cb8ff/1676245710/il_570xN.1676245710_ba0u.jpg)
+> ![Diana Guarin](/docs/img/dianaPerfil.jpg)
 >
 > **Diana Guarin**
-> Banksy is an anonymous England-based street artist, vandal, political activist, and film director, active since the 1990s. 
+> Estudiante de Ingenier&iacute;a de Sistemas y Computaci&oacute;n de &uacute;ltimo semestre. Intereses en Dise&ntilde;o de Interfaz y Experiencia de Usuario (UX/UI) y Redes de Computadores.
 > > :Buttons
-> > > :Button label=Wiki, url=https://en.wikipedia.org/wiki/Banksy
+> > > :Button label=Presentaci&oacute;n, url=/docs/team/DianaGuarin
 
 
 ## Workshops
 
 > :Card
 >
-> ![Card Hero](https://i.etsystatic.com/14457190/r/il/3cb8ff/1676245710/il_570xN.1676245710_ba0u.jpg)
+> ![Coding](https://www.teahub.io/photos/full/256-2565031_software-development.jpg)
 >
 > **Imaging & Video - Software**
-> Banksy is an anonymous England-based street artist, vandal, political activist, and film director, active since the 1990s. 
+> An&aacute;lisis e implementaci&oacute;n de t&eacute;cnicas como m&aacute;scaras de convoluci&oacute;n, ascii-art, fotomosaico y escala de grises para el procesamiento por software de imagenes y video.
 > > :Buttons
-> > > :Button label=Wiki, url=https://en.wikipedia.org/wiki/Banksy
+> > > :Button label=Desarrollo, url=/docs/workshops/imagingIntro
 
 > :Card
 >
-> ![Card Hero](https://i.etsystatic.com/14457190/r/il/3cb8ff/1676245710/il_570xN.1676245710_ba0u.jpg)
+> ![GPU Image](https://p4.wallpaperbetter.com/wallpaper/886/423/750/entertainment-graphics-gpu-hardware-wallpaper-preview.jpg)
 >
 > **Imaging & Video - Hardware**
-> Banksy is an anonymous England-based street artist, vandal, political activist, and film director, active since the 1990s. 
+> An&aacute;lisis e implementaci&oacute;n de t&eacute;cnicas como m&aacute;scaras de convoluci&oacute;n, ascii-art, fotomosaico y escala de grises para el procesamiento por hardware (directamente en la GPU) de imagenes y video.
 > > :Buttons
-> > > :Button label=Wiki, url=https://en.wikipedia.org/wiki/Banksy
+> > > :Button label=Desarrollo, url=/docs/workshops/hardwareIntro
 
 > :Card
 >
-> ![Card Hero](https://i.etsystatic.com/14457190/r/il/3cb8ff/1676245710/il_570xN.1676245710_ba0u.jpg)
+> ![Unity Shader](https://catlikecoding.com/unity/tutorials/basics/compute-shaders/tutorial-image.jpg)
 >
 > **Rendering**
-> Banksy is an anonymous England-based street artist, vandal, political activist, and film director, active since the 1990s. 
+> Indagaci&oacute;n e implementaci&oacute;n de m&eacute;todos de renderizaci&oacute;n espec&iacute;ficos como rasterizaci&oacute;n y ____. 
 > > :Buttons
-> > > :Button label=Wiki, url=https://en.wikipedia.org/wiki/Banksy
+> > > :Button label=Desarrollo, url=/docs/workshops/renderingIntro
 
-## Outline
+## Profesor
 
-| To read | Subject                                                            | 
-|------------|--------------------------------------------------------------------|
-|            | [Introduction](https://github.com/VisualComputing/Introduction)    |
-|            | [Processing](https://processing.org/) & [p5.js](https://p5js.org/) |
-| [gh-pages](https://pages.github.com/) | [VC Template](https://visualcomputing.github.io/vc/) |
-| [Do we see reality as it is?](http://y2u.be/oYp5XuGYqqY) | [Cognitive](https://github.com/VisualComputing/Cognitive) | 
-| [The barycentric conspiracy](https://fgiesen.wordpress.com/2013/02/06/the-barycentric-conspirac/) | [Rendering & Algorithm visualization](https://github.com/VisualComputing/Rendering) | 
-| [Shaders tutorial](https://processing.org/tutorials/pshader/) | [Fragment Shaders](https://github.com/VisualComputing/FragmentShaders) |
-| [3D Math primer for Graphics and Game Development -- chs. 8 & 9](https://tfetimes.com/wp-content/uploads/2015/04/F.Dunn-I.Parberry-3D-Math-Primer-for-Graphics-and-Game-Development.pdf), [Projection matrix](http://www.songho.ca/opengl/gl_projectionmatrix.html) | [Affine Transformations](https://github.com/VisualComputing/Transformations) |
-| [nub](https://github.com/VisualComputing/nub) | [SceneGraphs](https://github.com/VisualComputing/SceneGraphs) |
-| [A Survey of Interaction Techniques](https://hal.inria.fr/hal-00789413/document) | [Interaction](https://github.com/VisualComputing/Interaction) |
-| [Shaders tutorial](https://processing.org/tutorials/pshader/) | [Vertex Shaders](https://github.com/VisualComputing/VertexShaders) |
-| [Visualizing Data](http://media.espora.org/mgoblin_media/media_entries/1633/Visualizing_Data.pdf), [Network Science -- ch. 2](http://networksciencebook.com/chapter/2) | Data Visualization | 
-
-## Hacking
-
-The webpage is to be developed in _markdown_ ([CommonMark](https://spec.commonmark.org/0.29/) and [GitHub Flavored Markdown](https://github.github.com/gfm/)) at the `main` branch of your `https://github.com/<gh-username>/vc` repo using [codedoc](https://codedoc.cc/), and the resulting webpage served from the `gh-pages` branch of that repo at: `https://<gh-username>.github.io/vc/`. Refer to the [gh-pages](https://pages.github.com/) documentation for details.
-
+> :Card
+>
+> ![Jean Pierre Ch.](https://avatars.githubusercontent.com/u/645599?v=4)
+>
+> **Jean Pierre Charalambos**
+>  Profesor de la Facultad de Ingenier&iacute;a de la Universidad Nacional de Colombia, Departamento de Ingenier&iacute;a de Sistemas y Computaci&oacute;n.
+> > :Buttons
+> > > :Button label=Pantilla Curso, url=https://visualcomputing.github.io/vc/
 
 > :ToCPrevNext

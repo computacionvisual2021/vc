@@ -240,3 +240,5 @@ Un fotomosaico, en el campo de las imágenes y la fotografía, es una imagen que
 > >
 
 Créditos: [P5 photomosaic](https://editor.p5js.org/jnsjknn/sketches/HJU0bQ_fN)
+
+> :ToCPrevNext
