@@ -46,5 +46,5 @@ void main() {
   vec3 thresh = vec3(threshR, threshG, threshB);
 
   // Se renderiza la salida
-  gl_FragColor = vec4(thresh, 0);
+  gl_FragColor = vec4(thresh, 1.0);
 }
