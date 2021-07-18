@@ -1,22 +1,13 @@
 let theShader;
 let shaderTexture;
 let img;
-let cam;
-
-let theShaderVideo;
-let shaderVideo;
-let video;
-
 let angle = 0;
 let gray = 0;
 
 function preload() {
 	img = loadImage('/vc/docs/img/cat.jpg');
-	video = createVideo('');
-	video.hide();
 	// Cargar los shaders
 	theShader = loadShader('/vc/docs/sketches/workshop2/texture.vert', '/vc/docs/sketches/workshop2/texture.frag');
-	theShaderVideo = loadShader('/vc/docs/sketches/workshop2/texture.vert', '/vc/docs/sketches/workshop2/texture.frag');
 
 }
 
@@ -28,22 +19,17 @@ function setup() {
 	canvas.parent();
 	noStroke();
 
-
+	//Crear buffer grafico
 	shaderTexture = createGraphics(512, 512, WEBGL);
-	shaderVideo = createGraphics(windowWidth, windowHeight, WEBGL);
-
 	// Quitar bordes en el createGraphics
 	shaderTexture.noStroke();
-	shaderVideo.noStroke();
 
-	//cam.hide();
-	video.loop();
+
 }
 
 function draw() {
 	// Se pasa el shader a la capa del createGraphics
 	shaderTexture.shader(theShader);
-
 
 	// Valores uniform para el fragment shader
 	theShader.setUniform("u_img", img);
@@ -57,25 +43,27 @@ function draw() {
 	// Efecto linterna
 	let dx = mouseX - width / 2;
 	let dy = mouseY - height / 2;
-	pointLight(100, 250, 255, dx, dy, 100);
-
+	pointLight(255, 255, 255, dx, dy, 100);
+	//Fondo negro
 	background(0);
-
+	//Guardar el dibujo actual
 	push();
 	//Se pasa el shader como textura
 	texture(shaderTexture);
+	//Creación de cubo rotando
 	translate(200, 0, 0);
 	rotateZ(angle);
 	rotateX(angle);
 	rotateY(angle * 2);
 	box(200);
+	//Volver al dibujo anterior (Mostrar ambas configuraciones)
 	pop();
 
 	// Rotacion de la caja
 	angle += 0.002;
 
 	// Se pasa la imagen original como textura
-	texture(img);
+	texture(shaderTexture);
 	ellipse(-250, 0, 350, 350, 100);
 	push();
 
