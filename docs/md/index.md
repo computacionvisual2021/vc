@@ -64,6 +64,6 @@ Tener un acercamiento al proceso de la manipulaci&oacute;n de imagenes y video p
 > **Jean Pierre Charalambos**
 >  Profesor de la Facultad de Ingenier&iacute;a de la Universidad Nacional de Colombia, Departamento de Ingenier&iacute;a de Sistemas y Computaci&oacute;n.
 > > :Buttons
-> > > :Button label=Pantilla Curso, url=https://visualcomputing.github.io/vc/
+> > > :Button label=Plantilla Curso, url=https://visualcomputing.github.io/vc/
 
 > :ToCPrevNext

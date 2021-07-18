@@ -1,13 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\docs",
-    "\\docs\\md",
-    "\\docs\\md\\docs",
-    "\\docs\\md\\docs\\workshops",
-    "\\docs\\sketches",
+    "\\.codedoc",
+    "\\.codedoc\\components\\card",
+    "\\.codedoc\\components\\input",
+    "\\.codedoc\\components\\p5",
+    "\\.codedoc\\content",
     "\\docs\\sketches\\workshop2",
     "\\docs\\sketches\\workshop3"
   ],
+  "SelectedNode": "\\.codedoc\\content\\theme.ts",
   "PreviewInSolutionExplorer": false
 }
