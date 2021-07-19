@@ -51,7 +51,7 @@ Tener un acercamiento al proceso de la manipulaci&oacute;n de imagenes y video p
 > ![Unity Shader](https://catlikecoding.com/unity/tutorials/basics/compute-shaders/tutorial-image.jpg)
 >
 > **Rendering**
-> Indagaci&oacute;n e implementaci&oacute;n de m&eacute;todos de renderizaci&oacute;n espec&iacute;ficos como rasterizaci&oacute;n y ____. 
+> Indagaci&oacute;n e implementaci&oacute;n de m&eacute;todos de renderizaci&oacute;n espec&iacute;ficos como rasterizaci&oacute;n y arboles binarios de partición del espacio. 
 > > :Buttons
 > > > :Button label=Desarrollo, url=/docs/workshops/renderingIntro
 
