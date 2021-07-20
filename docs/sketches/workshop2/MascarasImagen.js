@@ -2,12 +2,13 @@ let theShader;
 let shaderTexture;
 let img;
 let angle = 0;
-let gray = 0;
+let filter = 0;
 
 function preload() {
+	//Precargar la imagen a usar
 	img = loadImage('/vc/docs/img/globos.jpg');
 	// Cargar los shaders
-	theShader = loadShader('/vc/docs/sketches/workshop2/texture.vert', '/vc/docs/sketches/workshop2/texture.frag');
+	theShader = loadShader('/vc/docs/sketches/workshop2/texture.vert', '/vc/docs/sketches/workshop2/convMask.frag');
 
 }
 
@@ -33,8 +34,9 @@ function draw() {
 
 	// Valores uniform para el fragment shader
 	theShader.setUniform("u_img", img);
-	theShader.setUniform("u_key", gray);
-
+	theShader.setUniform("u_key", filter); //Opcion de mascara escogida
+	// tamaño de un pixel en la pantalla
+	theShader.setUniform('stepSize', [1.0 / width, 1.0 / height]);
 
 	// Renderizar el shader
 	shaderTexture.rect(0, 0, width, height);
@@ -62,7 +64,7 @@ function draw() {
 	// Rotacion de la caja
 	angle += 0.002;
 
-	// Se pasa la imagen original como textura
+	// Se pasa la imagen como textura
 	texture(shaderTexture);
 	ellipse(-250, 0, 350, 350, 100);
 	push();
@@ -70,15 +72,23 @@ function draw() {
 
 }
 
-// Se ejecuta cuando se presiona cualquier tecla
+// Se ejecuta cuando se presiona alguno de los numeros
 function keyPressed() {
 	if (key === '0') {
-		gray = 0;
+		filter = 0;
 	} else if (key === '1') {
-		gray = 1;
+		filter = 1;
 	} else if (key === '2') {
-		gray = 2;
-	}
+		filter = 2;
+	} else if (key === '3') {
+		filter = 3;
+	} else if (key === '4') {
+		filter = 4;
+	} else if (key === '5') {
+		filter = 5;
+	} else if (key === '6') {
+		filter = 6;
+	} 
 }
 
 function windowResized() {
