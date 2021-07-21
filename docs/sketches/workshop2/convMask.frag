@@ -3,11 +3,11 @@
 precision mediump float;
 #endif
   
-  varying vec2 vTexCoord;
-  // Valores que se pasan desde p5
-  uniform sampler2D u_img;
-  uniform int u_key;
-  uniform vec2 stepSize; //Tamaño del texel a usar para cada paso ( 1.0 / width)
+varying vec2 vTexCoord;
+// Valores que se pasan desde p5
+uniform sampler2D u_img;
+uniform int u_key;
+uniform vec2 stepSize; //Tamaño del texel a usar para cada paso ( 1.0 / width)
 
 //Arreglo de 9 valores, cada uno representa un valor alrederor de un pixel (vecinos) y el pixel mismo
 vec2 offset[9];
@@ -29,7 +29,7 @@ void main() {
   kernel[3] = 0.0; kernel[4] = 1.0; kernel[5] = 0.0;
   kernel[6] = 0.0; kernel[7] = 0.0; kernel[8] = 0.0;
 
-  // Segun la tecla presionada por el ususario se define el kernel de la mascara respectiva
+  // Segun la tecla presionada por el usuario se define el kernel de la mascara respectiva
   
    if(u_key==1){
   
@@ -106,5 +106,4 @@ void main() {
   // Se renderiza la salida con el valor de la convolucion
   gl_FragColor = vec4(conv.rgb, 1.0);
 
-  
 }
