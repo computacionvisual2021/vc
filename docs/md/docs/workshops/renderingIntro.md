@@ -11,4 +11,8 @@ Para el renderizado se pueden usar dos recursos computacionales principales: la 
 
 Es por esto que el presente taller indaga en el dise&ntilde;o, ejecuci&oacute;n, procesamiento y resultados de algoritmos de renderizado como lo son la rasterizaci&oacute;n y la iluminaci&oacute;n global, de manera que mediante el procesamiento en GPU se observar&aacute;n y analizar&aacute;n los resultados y el desempe&ntilde;o obtenido.
 
+# Referencias y Fuentes: 
+
+[Renderizar con GPU / CPU](https://www.iscarnet.com/2018/06/renderizar-con-gpu-cpu-o-ambos/)
+
 > :ToCPrevNext

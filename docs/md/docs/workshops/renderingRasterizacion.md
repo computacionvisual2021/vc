@@ -58,15 +58,13 @@ En las pesta&ntilde;as ***Instrucciones y C&oacute;digo*** se detallar&aacute; e
 >
 > > :Tab title= Instrucciones
 > > 
-> > 1. Dibujar cuadr&iacute;cula en el canvas
-> > 
-> > 2. Graficar tri&aacute;ngulo seg&uacute;n coordenadas se&ntilde;aladas por usuario
-> > 
-> > 3. Recorrer cuadr&iacute;cula y calcular coordenadas baric&eacute;ntricas del punto medio en cada casilla
-> > 
-> > 4. Si el punto medio est&aacute; dentro del tri&aacute;ngulo, se rellena del color interpolado la celda.
-> > 
-> > 5. Si el punto medio no est&aacute; dentro del tri&aacute;ngulo, se rellena de color blanco.
+> > | No. | Descripci&oacute;n |
+> > |---|---|
+> > | 1 | Dibujar cuadr&iacute;cula en el canvas. |
+> > | 2 | Graficar tri&aacute;ngulo seg&uacute;n coordenadas se&ntilde;aladas por usuario. |
+> > | 3 | Recorrer cuadr&iacute;cula y calcular coordenadas baric&eacute;ntricas del punto medio en cada casilla. |
+> > | 4 | Si el punto medio est&aacute; dentro del tri&aacute;ngulo, se rellena del color interpolado la celda. |
+> > | 5 | Si el punto medio no est&aacute; dentro del tri&aacute;ngulo, se rellena de color blanco. |
 >  
 > > :Tab title= C&oacute;digo
 > >

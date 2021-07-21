@@ -9,4 +9,7 @@ Para observar un mejor procesamiento por parte del gr&aacute;n abanico de t&eacu
 
 Se propone as&iacute; el uso de la unidad de procesamiento gr&aacute;fico GPU por sus siglas en ingl&eacute;s, ya que est&aacute; optimizada los algoritmos de procesamiento de imagenes y actualmente poseen varios procesadores para diferentes tareas. El como realizar ejecuci&oacute;n de computaci&oacute;n en la GPU mediate el lenguaje GLSL (OpenGL Shading Language) basado en C (en su sintaxis) es el centro de estudio del presente taller. 
 
+# Referencias y Fuentes: 
+[Image Processing on Graphic Card](https://www.stemmer-imaging.com/en/technical-tips/image-processing-on-the-graphics-card/)
+
 > :ToCPrevNext

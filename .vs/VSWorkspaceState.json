@@ -1,8 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.codedoc",
     "\\docs",
+    "\\docs\\img",
     "\\docs\\md",
     "\\docs\\md\\docs",
     "\\docs\\md\\docs\\workshops",
@@ -10,6 +10,6 @@
     "\\docs\\sketches\\workshop2",
     "\\docs\\sketches\\workshop3"
   ],
-  "SelectedNode": "\\docs\\md\\docs\\workshops\\renderingIntro.md",
+  "SelectedNode": "\\docs\\sketches\\workshop2\\webcam.frag",
   "PreviewInSolutionExplorer": false
 }

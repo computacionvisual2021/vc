@@ -13,7 +13,9 @@ export const theme = /*#__PURE__*/createTheme({
       primary: '#f4976c',
       background: '#fbe8a6',
       text: '#303c6c',
-      primaryContrast: '#fbe8a6'
+      primaryContrast: '#fbe8a6',
+        border: '#f4976c',
+        code: '#fbe8a6'               // --> CSS color string, in-text code color
          
   },
   dark: {
@@ -21,7 +23,7 @@ export const theme = /*#__PURE__*/createTheme({
       primary: '#f76c6c',
       background: '#24305e',
       text: '#c1c8e4',
-      primaryContrast: '#f8e9a1'      // --> CSS color string, text color on primary background (e.g. buttons)
-  //border:  '#5ab9ea'              // --> CSS color string, border colors
+      primaryContrast: '#f8e9a1',      // --> CSS color string, text color on primary background (e.g. buttons)
+      border:  '#f76c6c'              // --> CSS color string, border colors
   }
 });

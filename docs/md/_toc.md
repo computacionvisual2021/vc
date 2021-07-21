@@ -18,6 +18,8 @@
 > > > [RGB y Luma](/docs/workshops/hardwareGrises)
 > > > [Mascaras de Convolución](/docs/workshops/hardwareMascaras)
 > > > [Ascii Art](/docs/workshops/hardwareAscii)
+> > > [Foto-Mosaico](/docs/workshops/hardwareMosaic)
+> > > [Desempeño](/docs/workshops/hardwarePerformance)
 > > > [Conclusiones y Trabajo Futuro](/docs/workshops/hardwareConclusion)
 >
 > > :Collapse label=Rendering
