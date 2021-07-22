@@ -36,11 +36,13 @@ donde
 > f_{12}(x, y) = (y_1 - y_2)x + (x_2 - x_1)y + x_1 * y_2 - x_2 * y_1 ; 1, 2 \in a,b,c
 > ```
 
-De esta manera es posible verificar si un punto se encuentra o no dentro de un tri&aacute;ngulo. A partir de aqu&iacute; se puede plantear la estrategia de rasterizaci&oacute;n. A saber, dibujar el triangulo en una cuadricula, analizar que cuadrados de la cuadricula se encuentran dentro del triangulo por medio de las coordenadas baricentricas , en caso de que este dentro, sombrear el cuadrado corresponndiente, y as&iacute; sucesivamente hasta recorrer toda la cuadricula.
+De esta manera es posible verificar si un punto se encuentra o no dentro de un tri&aacute;ngulo. A partir de aqu&iacute; se puede plantear la estrategia de rasterizaci&oacute;n. A saber, dibujar el triangulo en una cuadricula, analizar que cuadrados de la cuadricula se encuentran dentro del triangulo por medio de las coordenadas baricentricas , en caso de que este dentro, sombrear el cuadrado correspondiente, y as&iacute; sucesivamente hasta recorrer toda la cuadricula.
 
 A continuaci&oacute;n en la pesta&ntilde;a ***Coordenadas Baric&eacute;ntricas*** se puede observar el resultado del alrotirmo de las coordenadas baric&eacute;ntricas al situar el cursor sobre el tri&aacute;ngulo dibujado, se podr&aacute;n observar los valores de [\alpha (\lambda_0), \beta (\lambda_1)](:Formula) y [\gamma (\lambda_2)](:Formula) incluso si el cursor esta fuera de la figura (esto causar&aacute; que uno de los valores sea menos a 0 o mayor a 1).
 
 Por su parte en la pesta&ntilde;a ***Rasterizaci&oacute;n Completa*** se mostrar&aacute; la aplicaci&oacute;n de las coordenadas en el proceso de rasterizaci&oacute;n, juntando este c&aacute;lculo con la generaci&oacute;n de la cuadr&iacute;cula en la que se identificar&aacute; cuales cuadrados est&aacute;n dentro del tri&aacute;ngulo (sobrepasando su punto medio), coloreando de blanco aquellos que no se encuentren dentro, y de color los que si se encuentren. Se podr&aacute; alterar la figura del tri&aacute;ngulo al deseado por el usuario en ambas pesta&ntilde;as por medio de los botones ***derecho, izquierdo y central*** del mouse. 
+
+Como caso especial,en la pesta&ntilde;a ***Rasterizaci&oacute;n Antialiasing*** se realiza una implementaci&oacute;n de ***antialiasing*** para suavizar la rasterizaci&oacute;n del tri&aacute;ngulo al analizar los sub-cuadrados dentro de cada celda y su punto medio verificando si este reside dentro o fuera del pol&iacute;gono, resultando as&iacute; en una aproximaci&oacute;n m&aacute;s cercana al tri&aacute;ngulo original ya que se colorean los sub-cuadrados necesarios. La t&eacute;cnica del antialiasing se caracteriza por disminuir los cambios bruscos de color y atenuar las transiciones suaves en la frontera de representaciones gr&aacute;ficas, con esto se crea la ilusi&oacute;n de la mezcla de pixeles o difuminado de bordes.
 
 En las pesta&ntilde;as ***Instrucciones y C&oacute;digo*** se detallar&aacute; en la implementaci&oacute;n que sigue este proceso con sus comandos y c&oacute;digo fuente (comentado para mayor claridad).
 
@@ -50,11 +52,15 @@ En las pesta&ntilde;as ***Instrucciones y C&oacute;digo*** se detallar&aacute; e
 > :Tabs
 > > :Tab title= Coordenadas Baric&eacute;ntricas
 > > 
-> > > :P5 sketch=/docs/sketches/workshop3/rasterizationBayCoord.js, width=500, height=500
+> > > :P5 sketch=/docs/sketches/workshop3/rasterizationBayCoord.js, width=520, height=520
 >
 > > :Tab title= Rasterizaci&oacute;n Completa
 > > 
-> > > :P5 sketch=/docs/sketches/workshop3/rasterizationFull.js, width=500, height=500
+> > > :P5 sketch=/docs/sketches/workshop3/rasterizationFull.js, width=520, height=520
+>
+> > :Tab title= Rasterizaci&oacute;n Antialiasing
+> > 
+> > > :P5 sketch=/docs/sketches/workshop3/rasterizationFullAnti.js, width=520, height=520
 >
 > > :Tab title= Instrucciones
 > > 
@@ -64,7 +70,7 @@ En las pesta&ntilde;as ***Instrucciones y C&oacute;digo*** se detallar&aacute; e
 > > | 2 | Graficar tri&aacute;ngulo seg&uacute;n coordenadas se&ntilde;aladas por usuario. |
 > > | 3 | Recorrer cuadr&iacute;cula y calcular coordenadas baric&eacute;ntricas del punto medio en cada casilla. |
 > > | 4 | Si el punto medio est&aacute; dentro del tri&aacute;ngulo, se rellena del color interpolado la celda. |
-> > | 5 | Si el punto medio no est&aacute; dentro del tri&aacute;ngulo, se rellena de color blanco. |
+> > | 5 | Si el punto medio no est&aacute; dentro del tri&aacute;ngulo, se rellena de color blanco. (En caso de antializing se analiza cada uno de los cuadrados internos) |
 >  
 > > :Tab title= C&oacute;digo
 > >
@@ -176,6 +182,8 @@ Entre las aplicaciones de la rasterizaci&oacute;n adem&aacute;s de las mencionad
 
 Particularmente se considera la industria del entretenimiento de videojuegos como el nicho de aplicaci&oacute;n m&aacute;s grande debido a la demanda de procesamiento de gr&aacute;ficos de manera veloz, considerando que las texturas en el dise&ntilde;o de videojuegos modernas son mucho m&aacute;s detallasas y con comportamientos realistas que requieren de un alto rendimiento al transformar objetos en pixeles de manera r&aacute;pida.   
 
+Finalmente se resalta la utilidad de la t&eacute;cnica de antialiasing al permitir una mejor aproximaci&oacute;n y definici&oacute;n de los pol&iacute;gonos al momento de rasterizarce.
+
 # Referencias y Fuentes: 
 
 [Razterization Definicion](https://elcodigografico.wordpress.com/2014/03/29/coordenadas-baricentricas-en-triangulos/)
@@ -184,5 +192,6 @@ Particularmente se considera la industria del entretenimiento de videojuegos com
 
 [Razterization Aplications](https://www.ecured.cu/Rasterización)
 
+[Antialiasing](https://es.wikipedia.org/wiki/Antialiasing)
 
 > :ToCPrevNext

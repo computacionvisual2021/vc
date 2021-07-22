@@ -29,6 +29,8 @@
 
 [Razterization Aplications](https://www.ecured.cu/Rasterización)
 
+[Antialiasing](https://es.wikipedia.org/wiki/Antialiasing)
+
 [Visibilidad de Superficies 3d Mediante Barrido de Segmentos](http://oa.upm.es/6312/1/TESIS_MASTER_JOSE_MARIA_BENITO_DIAZ.pdf)
 
 [Partici&oacute;n Binaria del Espacio](https://es.wikipedia.org/wiki/Partici%C3%B3n_binaria_del_espacio)
