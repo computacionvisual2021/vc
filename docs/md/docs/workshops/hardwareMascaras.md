@@ -76,9 +76,9 @@ Finalmente, las pesta&ntilde;as ***C&oacute;digo Imagen y C&oacute;digo Video***
 > > | No. | Descripci&oacute;n |
 > > |---|---|
 > > | 1 | Precargar Shader para imagen/ video con el vertex y fragment shader. |
-> > | 2 | Crear canvas de WEBGL. |
-> > | 3 | Crear el shader a partir del precargado. |
-> > | 4 | Pasar datos de imagen/video y tecla de control al Fragment Shader. |
+> > | 2 | Dividir el Ã¡rea a lo largo de una lÃ­nea horizontal o vertical. |
+> > | 3 | Seleccionar una de las dos nuevas celdas de particiÃ³n. |
+> > | 4 | Realizar nuevamente el paso numero 2. |
 > > | 5 | A partir de la tecla presionada por el usuario se definen los valores de la matriz kernel de convoluci&oacute;n (si aplica). |
 > > | 6 | En el caso de Imagen (y algunas m&aacute;scaras de Video) se obtienen los pixeles vecinos por cada pixel. |
 > > | 7 | Se realiza la operaci&oacute;n de convoluci&oacute;n con el kernel o valores correspondientes a cada pixel. |
@@ -169,7 +169,7 @@ Finalmente, las pesta&ntilde;as ***C&oacute;digo Imagen y C&oacute;digo Video***
 > > 
 > >   }
 > >   
-> >   //Guardar la ubicación de los pixeles vecinos
+> >   //Guardar la ubicaciï¿½n de los pixeles vecinos
 > > 	offset[0] = vec2(-stepSize.x, -stepSize.y); // top left
 > > 	offset[1] = vec2(0.0, -stepSize.y); // top middle
 > > 	offset[2] = vec2(stepSize.x, -stepSize.y); // top right
@@ -311,7 +311,7 @@ Finalmente, las pesta&ntilde;as ***C&oacute;digo Imagen y C&oacute;digo Video***
 > >  kernel[6] = 0.0; kernel[7] = 1.0; kernel[8] = 2.0;
 > >   }
 > >
-> >   //Guardar la ubicación de los pixeles vecinos
+> >   //Guardar la ubicaciï¿½n de los pixeles vecinos
 > >	offset[0] = vec2(-texelSize.x, -texelSize.y); // top left
 > >	offset[1] = vec2(0.0, -texelSize.y); // top middle
 > >	offset[2] = vec2(texelSize.x, -texelSize.y); // top right

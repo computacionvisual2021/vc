@@ -3,15 +3,13 @@
 <script src="../sketches/workshop1/p5.dom.min.js" /></script>
 <script src="../sketches/workshop1/p5.sound.min.js" /></script>
 
-<h1 align="center">Binary space partitioning</h1>
+<h1 align="center">Partición Binaria del Espacio</h1>
 
-# Algoritmo
+# Algoritmo BSP
 
-Particionamiento del espacio binario (BSP) es un método para recursivamente subdividiendo un espacio En dos conjuntos convexos mediante el uso hiperplanos como particiones. Este proceso de subdivisión da lugar a una representación de objetos dentro del espacio en forma de un estructura de datos de árbol conocido como Árbol BSP.
+Particionamiento del espacio binario (BSP) es un método para subdividir recursivamente un espacio en elementos convexos empleando hiperplanos. Este proceso de subdivisión da lugar a una representación de objetos dentro del espacio en forma de un estructura de datos de árbol conocido como Árbol BSP.
 
-La partición del espacio binario se desarrolló en el contexto de Gráficos 3D por computadora en 1969. La estructura de un árbol BSP es útil en representación porque puede proporcionar información espacial de manera eficiente sobre los objetos en una escena, como los objetos que se ordenan de adelante hacia atrás con respecto a un espectador en una ubicación determinada. Otras aplicaciones de BSP incluyen: realizar geométrico operaciones con formas (geometría sólida constructiva), detección de colisiones en robótica y videojuegos en 3D, trazado de rayosy otras aplicaciones que involucran el manejo de escenas espaciales complejas.
-
-La partición binaria del espacio es un proceso genérico que divide una escena recursivamente en dos hasta que satisface uno o más requisitos. El método específico empleado varía dependiendo del objetivo final. Por ejemplo, en un árbol BSP empleado para la detección de colisiones el objeto original sería dividido hasta que cada parte sea lo suficientemente sencilla como para ser individualmente comprobada, y en el renderizaje interesa que cada parte sea convexa, de forma que el algoritmo del pintor pueda ser usado.
+La partición binaria del espacio es un proceso genérico que divide una escena recursivamente en dos hasta que satisface uno o más requisitos. El método específico empleado varía dependiendo del objetivo final. Por ejemplo, en un árbol BSP empleado para la detección de colisiones el objeto original sería dividido hasta que cada parte sea lo suficientemente sencilla como para ser individualmente comprobada, y en el renderizaje interesa que cada parte sea convexa, de forma que el algoritmo del pintor pueda ser usado posteriormente.
 
 El número final de objetos crecerá inevitablemente ya que las líneas y caras que se crucen con el plano de partición serán divididas en dos, y también es deseable que el árbol final esté razonablemente balanceado. De hecho, el algoritmo para crear un árbol BSP correcta y eficientemente es la parte más difícil de implementar. En un espacio de tres dimensiones, se emplean planos para dividir las caras de un objeto; en un espacio de dos se emplean líneas.
 
@@ -40,7 +38,6 @@ Inicialmente, esta idea se propuso para los gráficos 3D por ordenador para incr
 
 El uso más común de los árboles de BSP es probablemente retiro superficial ocultado en tres dimensiones. Los árboles de BSP proporcionan un método elegante, eficiente para clasificar polígonos vía una primera caminata del árbol de la profundidad: algoritmo “del pintor delantero” o Algoritmo del pintor.
 
-
 # Objetivos del BSP
 
 1. Permiten determinar el orden en que deben ser dibujados los polígonos para lograr el retiro superficial ocultado.
@@ -50,58 +47,73 @@ El uso más común de los árboles de BSP es probablemente retiro superficial oc
 # Soluci&oacute;n y Resultados
 
 > :Tabs
-> > :Tab title= Visualizacion Imagen
+> > :Tab title= Visualizacion Algoritmo
 > > 
 > > > :P5 sketch=/docs/sketches/workshop3/sketch.js, width=700, height=700
 >
-> > :Tab title=  Video
+> > :Tab title=  Juego que implementa BSP
 > > 
-> > > [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yTRzfKh4Tg0/0.jpg)](https://www.youtube.com/watch?v=yTRzfKh4Tg0)
+> >  <a href="http://www.youtube.com/watch?feature=player_embedded&v=e0W65ScZmQw" target="_blank"><img src="http://img.youtube.com/vi/e0W65ScZmQw/0.jpg" alt="Doom with BSP" width="800" height="800" /></a>
+> >
 >
 > > :Tab title= Instrucciones
-> > 
-> > 1. Las imagenes a convertir estan precargadas en el arreglo images[]
-> > 
-> > 2. Se calcula el indice de la imagen a convertir en cyclic_t
-> > 
-> > 3. Se carga la imagen en el objeto gfx para hacer la posterizaci&oacute;n
-> > 
-> > 4. Se hace la posterizaci&oacute;n con gfx.filter(POSTERIZE, 3) para atenuar los cambios de color en la imagen
-> > 
-> > 5. Se convierte la imagen con la librer&iacute;a y se guarda en ascii_arr como un arreglo 2d de caracteres ascii.
-> > 
-> > 6. Se imprime el arreglo en el canvas con la funci&oacute;n typeArray2d
-> > 
-> > 7. Finalmente se muestra la imagen original en transicion a la convertida 
->
+> >
+> > | No. | Descripción |
+> > |---|---|
+> > | 1 | Crear el nodo raíz. |
+> > | 2 | Dividir el área a lo largo de una línea horizontal o vertical. |
+> > | 3 | Seleccionar una de las dos nuevas celdas de partición. |
+> > | 4 | Realizar nuevamente el paso numero 2 (usando esta celda como el área a dividir). |
+> > | 5 | Dividir el área a lo largo de una línea horizontal o vertical. |
+> > | 6 | Realizar todos los pasos nuevamente hasta que cada parte sea lo suficientemente sencilla como para ser individualmente comprobada. |
+> 
 > > :Tab title= Codigo
 > >
-> > ``` js | asciiArtImages.js
-> > function draw() {
-> >     background(0);
-> >     
-> >     cyclic_t = millis() * 0.0002 % images.length;
-> >     
-> >    gfx.image(images[floor(cyclic_t)], 0, 0, gfx.width, gfx.height);
-> >     
-> >     gfx.filter(POSTERIZE, 3);
-> >    
-> >     ascii_arr = myAsciiArt.convert(gfx);
-> >     
-> >     myAsciiArt.typeArray2d(ascii_arr, this);
-> >     
-> >     tint(255, pow(1.0 - (cyclic_t % 1.0), 4) * 255);
-> >     image(images[floor(cyclic_t)], 0, 0, width, height);
-> >     noTint();
-> > }
-> > 
-> > ```
-> > 
+> > ``` js | sketch.js
+> > var imported = document.createElement('script');
+> >imported.src = "/vc/docs/sketches/workshop3/node.js";
+> >document.head.appendChild(imported);
+> >
+> >var height = 720;
+> >var width = 1280;
+> >
+> >var mouseStartPos;
+> >var mouseEndPos;
+> >var auxPoint;
+> >var toDraw = false;
+> >
+> >var pressedMouseLine = null;
+> >
+> >var initialVertices = [[0,0],
+> >						[width, 0],
+> >						[width, height],
+> >						[0, height]]
+> >var rootNode;
+> >
+> >function setup() {
+> >  createCanvas(1280, 720);
+> >  mouseStartPos = createVector(0,0);
+> >  mouseEndPos = createVector(0,0);
+> >  auxPoint = createVector(0,0);
+> >  rootNode = new Node(initialVertices, null, null);
+> >}
+> >
+> >function draw() {
+> >  clear();
+> >  stroke(255,255,255);
+> >  strokeWeight(4);
+> >  rootNode.draw();
+> >  if (pressedMouseLine != null){
+> >  	line(pressedMouseLine[0], pressedMouseLine[1], pressedMouseLine[2], pressedMouseLine[3])
+> >  }
+> >}
 
 # Referencias y Fuentes: 
 
 [Visibilidad de Superficies 3d Mediante Barrido de Segmentos](http://oa.upm.es/6312/1/TESIS_MASTER_JOSE_MARIA_BENITO_DIAZ.pdf)
 
 [Partici&oacute;n Binaria del Espacio](https://es.wikipedia.org/wiki/Partici%C3%B3n_binaria_del_espacio)
+
+[DOOM under the hood](https://www.youtube.com/watch?v=e0W65ScZmQw)
 
 > :ToCPrevNext

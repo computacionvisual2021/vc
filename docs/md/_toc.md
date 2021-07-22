@@ -25,7 +25,7 @@
 > > :Collapse label=Rendering
 > >
 > > [Introducción](/docs/workshops/renderingIntro)
-> > [Iluminación Global](/docs/workshops/renderingIluminacion)
+> > [Algoritmo de Visibilidad](/docs/workshops/renderingIluminacion)
 > > [Algoritmo Rasterización](/docs/workshops/renderingRasterizacion)
 > > [Conclusiones y Trabajo Futuro](/docs/workshops/renderingConclusion)
 >
