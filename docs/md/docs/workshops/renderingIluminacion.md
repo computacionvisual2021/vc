@@ -11,13 +11,15 @@ Particionamiento del espacio binario (BSP) es un método para subdividir recursi
 
 La partición binaria del espacio es un proceso genérico que divide una escena recursivamente en dos hasta que satisface uno o más requisitos. El método específico empleado varía dependiendo del objetivo final. Por ejemplo, en un árbol BSP empleado para la detección de colisiones el objeto original sería dividido hasta que cada parte sea lo suficientemente sencilla como para ser individualmente comprobada, y en el renderizaje interesa que cada parte sea convexa, de forma que el algoritmo del pintor pueda ser usado posteriormente.
 
-El número final de objetos crecerá inevitablemente ya que las líneas y caras que se crucen con el plano de partición serán divididas en dos, y también es deseable que el árbol final esté razonablemente balanceado. De hecho, el algoritmo para crear un árbol BSP correcta y eficientemente es la parte más difícil de implementar. En un espacio de tres dimensiones, se emplean planos para dividir las caras de un objeto; en un espacio de dos se emplean líneas.
+Un árbol BSP es una estructura de datos utilizada para ordenar y buscar polígonos en el espacio n-dimensional. El espacio es representado por el árbol, mientras que los nodos del mismo representan subespacios convexos.
+Cada nodo almacena hiperplanos que dividen el espacio en dos, referencian a dos nodos y almacenan uno o más segmentos o polígonos (según las dimensiones del espacio utilizado).
+Normalmente los árboles BSP representan espacios de dos dimensiones (juegos tipo Doom) y tres dimensiones (juego tipo Quake). En el primer caso los nodos almacenan segmentos y en el segundo los nodos almacenan polígonos.
 
 La siguiente imagen ilustra el proceso de partición de un polígono irregular en una serie de polígonos convexos. Destacar cómo cada paso produce polígonos con menos segmentos hasta que se llega a F y G, que son convexos y no necesitan mayor partición. En este caso en particular, la línea de partición se ha tomado empleando vértices existentes del polígono y no se intersecciona con ninguno de sus segmentos. Si la línea de partición se intersecciona con un segmento, o una cara en un modelo tridimensional, el/los segmento/s o cara/s tienen que ser divididas en dos dado que cada partición debe ser un objeto completo e independiente.
 
 <div>
 <p style = 'text-align:center;'>
-<img src="/docs/img/space.jpg" width=500/>
+<img src="/docs/img/Binary_space_p.png" width=500/>
 </p>
 </div>
 
@@ -25,6 +27,12 @@ La siguiente imagen ilustra el proceso de partición de un polígono irregular e
 2. Se divide A en B y C
 3. Se divide B en D y E.
 4. Se divide D en F y G, que son convexos y se convierten en hojas del árbol
+
+# Objetivos del BSP
+
+1. Permiten determinar el orden en que deben ser dibujados los polígonos para lograr el retiro superficial ocultado.
+2. Permiten determinar si un punto determinado está en una parte sólida del modelo o no.
+3. Permiten detectar las colisiones con el modelo.
 
 # Usos del BSP
 
@@ -37,12 +45,6 @@ Inicialmente, esta idea se propuso para los gráficos 3D por ordenador para incr
 </div>
 
 El uso más común de los árboles de BSP es probablemente retiro superficial ocultado en tres dimensiones. Los árboles de BSP proporcionan un método elegante, eficiente para clasificar polígonos vía una primera caminata del árbol de la profundidad: algoritmo “del pintor delantero” o Algoritmo del pintor.
-
-# Objetivos del BSP
-
-1. Permiten determinar el orden en que deben ser dibujados los polígonos para lograr el retiro superficial ocultado.
-2. Permiten determinar si un punto determinado está en una parte sólida del modelo o no.
-3. Permiten detectar las colisiones con el modelo.
 
 # Soluci&oacute;n y Resultados
 
