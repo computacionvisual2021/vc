@@ -1,27 +1,30 @@
 <h1 align="center">Conclusiones</h1>
 
-1. Para la aplicación de filtros en imágenes y videos se usa la operación de convolución.
+1. La rasterizaci&oacute;n por medio de coordenadas baric&eacute;ntricas permite el procesamiento de gr&aacute;ficos para videojuegos teniendo en cuenta que las texturas que se usan actualmente son muy detalladas y requieren un alto rendimiento, cosa que permite el algoritmo de rasterizaci&oacute;n.
 
-2. La densidad de los caracteres para la representación gráfica de ascii art influye determinantemente en el resultado del proceso, haciendo la elección de los caracteres crucial para un buen desempeño del algoritmo de codificación.
-
-3. La realización de foto-mosaicos se ve influenciada por la gama de colores que abarca la biblioteca de imágenes base, por lo cual se debe tener en cuenta que una gran variedad de colores esté disponible para la composición de los foto-mosaicos.
+2. Por medio de la t&eacute;cnica del anti-alising se mejora la presici&oacute;n de la rasterizaci&oacute;n al suavizar la conversi&oacute;n a pixeles para incluir zonas que est&eacute;n parcialmente dentro del tri&aacute;ngulo, esto contribuye a una mayor resoluci&oacute;n y definici&oacute;n de objetos.
 
 <h1 align="center">Trabajo Futuro</h1>
 
-1. Las mascaras de convolucion permiten filtrar imágenes para tomar información relevante aplicable a otras diciplinas como reconocimiento de caracteristicas (personas, placas, etc)
+1. La rasterizaci&oacute;n tiene un alto potencial de paralelizaci&oacute;n al emplearse en el procesamiento de figuras compuestas de m&uacute;ltiples pol&iacute;gonos (en particular tri&aacute;ngulos). Esto aumentar&iacute;a su desempeño notablemente.
 
-2. Son frecuentes hoy día las cámaras fotográficas que incorporan un software destinado a su construcción o aplicaciones en línea como Google Maps que permiten visualizar mapas resultantes de la construcción de foto-mosaicos. 
+2. El renderizado de escenarios para contenido audiovisual como videojuegos o pel&iacute;culas se beneficia de las propiedades de profundidad y renderizado seg&uacute;n el punto de vista, por lo que se hace posible un mayor realismo en estos &aacute;mbito.
 
-3. La inteligencia artificial puede aportar a la composición y procesamiento de imágenes al poder encontrar por ejemplo la mejor manera de componer un foto-mosaico, la mejor elección de caracteres para ascii art o encontrar la máscara de convolución apropiada para la información solicitada.
-
-4. El ascii art puede significar una técnica de compresión de imágenes y videos en la cual se reduciría significativamente su peso para su envío a necesidad.
-
-5. La mayor aplicación del ascii art se concentra en la operación de equipos computarizados y de comunicación para representar caracteres de texto o identificar dispositivos de control computarizado que trabajan exclusivamente con texto y no tienen capacidad de procesamiento de imágenes.
 
 <h1 align="center">Referencias y Fuentes</h1>
 
 [Renderizado](https://es.wikipedia.org/wiki/Renderización)
 
 [Renderizado con CPU y GPU](https://www.iscarnet.com/2018/06/renderizar-con-gpu-cpu-o-ambos/)
+
+[Razterization Definicion](https://elcodigografico.wordpress.com/2014/03/29/coordenadas-baricentricas-en-triangulos/)
+
+[Razterization Tutorial](https://github.com/JoseMolano/CompVisualProy)
+
+[Razterization Aplications](https://www.ecured.cu/Rasterización)
+
+[Visibilidad de Superficies 3d Mediante Barrido de Segmentos](http://oa.upm.es/6312/1/TESIS_MASTER_JOSE_MARIA_BENITO_DIAZ.pdf)
+
+[Partici&oacute;n Binaria del Espacio](https://es.wikipedia.org/wiki/Partici%C3%B3n_binaria_del_espacio)
 
 > :ToCPrevNext

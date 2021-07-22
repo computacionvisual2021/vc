@@ -3,6 +3,12 @@
 
 # Planteamiento del Problema
 
+<div>
+<p style = 'text-align:center;'>
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/5-cell.gif" width=400/>
+</p>
+</div>
+
 La renderizaci&oacute;n en computaci&oacute;n gr&aacute;fica se define como el proceso de generar im&aacute;genes por medio de modelos y programas computacionales ya sea en 2D o 3D. Para esto se requiere un modelo base para generar los resultados deseados llamados *render*.
 
 Usualmente el proceso de renderizado consiste en agregar texturas ya sea de luz, mapeo, posici&oacute;n, entre otras.
