@@ -3,22 +3,60 @@
 <script src="../sketches/workshop1/p5.dom.min.js" /></script>
 <script src="../sketches/workshop1/p5.sound.min.js" /></script>
 
-<h1 align="center">Ascii Art</h1>
+<h1 align="center">Binary space partitioning</h1>
 
-# Antecedentes
+# Algoritmo
 
-El ASCII Art es una t&eacute;cnica de dise&ntilde;o que consiste en la representaci&oacute;n de im&aacute;genes a partir de la combinaci&oacute;n de los caracteres establecidos por el est&aacute;ndar ASCII. Esta practica se invent&oacute; a ra&iacute;z de que las primeras impresoras carec&iacute;an de habilidades gr&aacute;ficas; por lo que se usaban caracteres para hacer banners, separadores, y marcas distintivas cuando no se pod&iacute;an adjuntar piezas gr&aacute;ficas en correos y otros textos. El uso de ASCII Art se expandi&oacute; entre finales de los 1970's y comienzos de los 1980's con el uso de Bulletin Board Systems (BBS) que funcionaban por medio de terminales de comandos, lo que hacia imperativo usar caracteres para representar im&aacute;genes, incluso en esos momentos nac&iacute;an grupos de arte que creaban comics basados en ASCII Art. Sin embargo con la llegada de tipograf&iacute;as de ancho variable y las b&uacute;squedas gr&aacute;ficas, en los 1990's llego el declive del ASCII Art; pero este ha sobrevivido en plataformas de chat, mensajes, correos y juegos de rol multijugador hasta nuestros d&iacute;as. 
+Particionamiento del espacio binario (BSP) es un método para recursivamente subdividiendo un espacio En dos conjuntos convexos mediante el uso hiperplanos como particiones. Este proceso de subdivisión da lugar a una representación de objetos dentro del espacio en forma de un estructura de datos de árbol conocido como Árbol BSP.
+
+La partición del espacio binario se desarrolló en el contexto de Gráficos 3D por computadora en 1969. La estructura de un árbol BSP es útil en representación porque puede proporcionar información espacial de manera eficiente sobre los objetos en una escena, como los objetos que se ordenan de adelante hacia atrás con respecto a un espectador en una ubicación determinada. Otras aplicaciones de BSP incluyen: realizar geométrico operaciones con formas (geometría sólida constructiva), detección de colisiones en robótica y videojuegos en 3D, trazado de rayosy otras aplicaciones que involucran el manejo de escenas espaciales complejas.
+
+La partición binaria del espacio es un proceso genérico que divide una escena recursivamente en dos hasta que satisface uno o más requisitos. El método específico empleado varía dependiendo del objetivo final. Por ejemplo, en un árbol BSP empleado para la detección de colisiones el objeto original sería dividido hasta que cada parte sea lo suficientemente sencilla como para ser individualmente comprobada, y en el renderizaje interesa que cada parte sea convexa, de forma que el algoritmo del pintor pueda ser usado.
+
+El número final de objetos crecerá inevitablemente ya que las líneas y caras que se crucen con el plano de partición serán divididas en dos, y también es deseable que el árbol final esté razonablemente balanceado. De hecho, el algoritmo para crear un árbol BSP correcta y eficientemente es la parte más difícil de implementar. En un espacio de tres dimensiones, se emplean planos para dividir las caras de un objeto; en un espacio de dos se emplean líneas.
+
+La siguiente imagen ilustra el proceso de partición de un polígono irregular en una serie de polígonos convexos. Destacar cómo cada paso produce polígonos con menos segmentos hasta que se llega a F y G, que son convexos y no necesitan mayor partición. En este caso en particular, la línea de partición se ha tomado empleando vértices existentes del polígono y no se intersecciona con ninguno de sus segmentos. Si la línea de partición se intersecciona con un segmento, o una cara en un modelo tridimensional, el/los segmento/s o cara/s tienen que ser divididas en dos dado que cada partición debe ser un objeto completo e independiente.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="/docs/img/space.jpg" width=500/>
+</p>
+</div>
+
+1. A es la raíz del árbol y de todo el polígono.
+2. Se divide A en B y C
+3. Se divide B en D y E.
+4. Se divide D en F y G, que son convexos y se convierten en hojas del árbol
+
+# Usos del BSP
+
+Inicialmente, esta idea se propuso para los gráficos 3D por ordenador para incrementar la eficiencia de renderizado. Otros usos son el procesamiento geométrico con formas, Constructive Solid Geometry en herramientas CAD, detección de colisiones en robótica y videojuegos 3D, y otras aplicaciones informáticas que incluyen el manejo de estructuras espaciales complejas. la eliminación de caras ocultas ya que gracias a los planos divisorios del árbol conoceríamos qué polígonos están detrás o delante, teniendo solamente que considerar determinadas ramas del árbol a través de la posición desde la que nos estemos posicionando en él.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="/docs/img/dungeongen.png" width=500/>
+</p>
+</div>
+
+El uso más común de los árboles de BSP es probablemente retiro superficial ocultado en tres dimensiones. Los árboles de BSP proporcionan un método elegante, eficiente para clasificar polígonos vía una primera caminata del árbol de la profundidad: algoritmo “del pintor delantero” o Algoritmo del pintor.
+
+
+# Objetivos del BSP
+
+1. Permiten determinar el orden en que deben ser dibujados los polígonos para lograr el retiro superficial ocultado.
+2. Permiten determinar si un punto determinado está en una parte sólida del modelo o no.
+3. Permiten detectar las colisiones con el modelo.
 
 # Soluci&oacute;n y Resultados
 
 > :Tabs
 > > :Tab title= Visualizacion Imagen
 > > 
-> > > :P5 sketch=/docs/sketches/workshop1/asciiArtImages.js, width=800, height=600
+> > > :P5 sketch=/docs/sketches/workshop3/sketch.js, width=700, height=700
 >
-> > :Tab title= Visualizacion Video
+> > :Tab title=  Video
 > > 
-> > > :P5 sketch=/docs/sketches/workshop1/asciiArtVideos.js, width=650, height=520
+> > > [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/yTRzfKh4Tg0/0.jpg)](https://www.youtube.com/watch?v=yTRzfKh4Tg0)
 >
 > > :Tab title= Instrucciones
 > > 
@@ -60,6 +98,6 @@ El ASCII Art es una t&eacute;cnica de dise&ntilde;o que consiste en la represent
 > > ```
 > > 
 
-Creditos de: [Libreria asciiart](https://www.tetoki.eu/asciiart/asciiart_stillimage.html)
+Creditos de: [Ray Tracing](https://p5js.org/es/examples/3d-ray-casting.html)
 
 > :ToCPrevNext

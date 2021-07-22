@@ -5,20 +5,18 @@
 
 <h1 align="center">Ascii Art</h1>
 
-# Antecedentes
-
-El ASCII Art es una t&eacute;cnica de dise&ntilde;o que consiste en la representaci&oacute;n de im&aacute;genes a partir de la combinaci&oacute;n de los caracteres establecidos por el est&aacute;ndar ASCII. Esta practica se invent&oacute; a ra&iacute;z de que las primeras impresoras carec&iacute;an de habilidades gr&aacute;ficas; por lo que se usaban caracteres para hacer banners, separadores, y marcas distintivas cuando no se pod&iacute;an adjuntar piezas gr&aacute;ficas en correos y otros textos. El uso de ASCII Art se expandi&oacute; entre finales de los 1970's y comienzos de los 1980's con el uso de Bulletin Board Systems (BBS) que funcionaban por medio de terminales de comandos, lo que hacia imperativo usar caracteres para representar im&aacute;genes, incluso en esos momentos nac&iacute;an grupos de arte que creaban comics basados en ASCII Art. Sin embargo con la llegada de tipograf&iacute;as de ancho variable y las b&uacute;squedas gr&aacute;ficas, en los 1990's llego el declive del ASCII Art; pero este ha sobrevivido en plataformas de chat, mensajes, correos y juegos de rol multijugador hasta nuestros d&iacute;as. 
-
+# Ascii Art Hadware
+Historia Ascii art perrona :v
 # Soluci&oacute;n y Resultados
 
 > :Tabs
 > > :Tab title= Visualizacion Imagen
 > > 
-> > > :P5 sketch=/docs/sketches/workshop1/asciiArtImages.js, width=800, height=600
+> > > :P5 sketch=/docs/sketches/workshop2/Ascii2.js, width=640, height=634
 >
 > > :Tab title= Visualizacion Video
 > > 
-> > > :P5 sketch=/docs/sketches/workshop1/asciiArtVideos.js, width=650, height=520
+> > > :P5 sketch=/docs/sketches/workshop2/Ascii2.js, width=670, height=400
 >
 > > :Tab title= Instrucciones
 > > 
