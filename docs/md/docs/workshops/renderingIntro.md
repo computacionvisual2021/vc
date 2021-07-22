@@ -13,9 +13,9 @@ La renderizaci&oacute;n en computaci&oacute;n gr&aacute;fica se define como el p
 
 Usualmente el proceso de renderizado consiste en agregar texturas ya sea de luz, mapeo, posici&oacute;n, entre otras.
 
-Para el renderizado se pueden usar dos recursos computacionales principales: la CPU (Central Processing Unit) y/o la GPU (Graphic Processing Unit). Como es bien sabido la CPU es el procesador del computador y tiene como funci&oacute;n ejecutar instrucciones y realizar procesamientos generales; mientras que la GPU se encarga de reducir la carga de la CPU en el procesamiento de gr&aacute;ficos. A causa de esto la tarjeta gr&aacute;fica es el componenete ideal para el procesamiento y renderizado de imagenes.
+Para el renderizado se pueden usar dos recursos computacionales principales: la CPU (Central Processing Unit) y/o la GPU (Graphic Processing Unit). Como es bien sabido la CPU es el procesador del computador y tiene como funci&oacute;n ejecutar instrucciones y realizar procesamientos generales; mientras que la GPU se encarga de reducir la carga de la CPU en el procesamiento de gr&aacute;ficos.
 
-Es por esto que el presente taller indaga en el dise&ntilde;o, ejecuci&oacute;n, procesamiento y resultados de algoritmos de renderizado como lo son la rasterizaci&oacute;n y la iluminaci&oacute;n global, de manera que mediante el procesamiento en GPU se observar&aacute;n y analizar&aacute;n los resultados y el desempe&ntilde;o obtenido.
+Es por esto que el presente taller indaga en el dise&ntilde;o, ejecuci&oacute;n, procesamiento y resultados de algoritmos de renderizado como lo son la rasterizaci&oacute;n y la iluminaci&oacute;n global, de manera que mediante el procesamiento se observar&aacute;n y analizar&aacute;n los resultados y el desempe&ntilde;o obtenido.
 
 # Referencias y Fuentes: 
 
