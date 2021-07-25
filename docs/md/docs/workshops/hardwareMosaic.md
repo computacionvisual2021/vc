@@ -1,5 +1,5 @@
-
-<h1 align="center">Escala de Grises RGB y LUMA</h1>
+﻿
+<h1 align="center">Foto-mosaico</h1>
 
 # Antecedentes
 
@@ -50,124 +50,98 @@ Finalmente, las pesta&ntilde;as ***C&oacute;digo Imagen y C&oacute;digo Video***
 # Soluci&oacute;n y Resultados
 
 > :Tabs
-> > :Tab title= Imagen RGB y Luma
+> > :Tab title= Imagen Foto-Mosaico
 > > 
-> > > :P5 sketch=/docs/sketches/workshop2/RGBLumaImagen.js, width=1000, height=410
-> 
-> > :Tab title= Video RGB y Luma
-> > 
-> > > :P5 sketch=/docs/sketches/workshop2/RGBLumaVideo.js, width=720, height=400
+> > > :P5 sketch=/docs/sketches/workshop2/mosaic.js, width=620, height=620
 >
 > > :Tab title= Instrucciones
 > > 
 > > | No. | Descripci&oacute;n |
 > > |---|---|
-> > | 1 | Precargar Shader para imagen/ video con el vertex y fragment shader. |
+> > | 1 | Precargar Shader para imagen con el vertex y fragment shader. |
 > > | 2 | Crear canvas de WEBGL. |
 > > | 3 | Crear el shader a partir del precargado. |
-> > | 4 | Pasar datos de imagen/video y tecla de control al Fragment Shader. |
-> > | 5 | El fragment shader carga la textura (ya sea video o imagen). |
-> > | 6 | Calcula el valor en escala de grises a representar seg&uacute;n el comando recibido en la tecla de control. |
-> > | 7 | Renderizar el valor de color deseado y mostrar en pantalla. |
-> > | 8 | En el caso de Imagen, aplicar la textura renderizada en 2D(elipse) y 3D (cubo). |
+> > | 4 | Pasar datos de imagen base, imagenes de mosaico y botones de resolución y activación de mosaico al Fragment Shader. |
+> > | 5 | El fragment shader carga la textura |
+> > | 6 | Calcula el valor del luma en cada texel |
+> > | 7 | Según el valor del luma calculado se escoge la imagen a renderizar (dentro del conjunto previamente ordenado por luminosidad) |
+> > | 8 | Renderizar la imagen correspondiente al valor de luminosidad en la pantalla en la resolución del mosaico deseada. |
 >
-> > :Tab title= C&oacute;digo Imagen
+> > :Tab title= C&oacute;digo 
 > >
-> > ``` glsl | texture.frag
-> > // Funcion para convertir un color a escala de grises
-> > float grayscale(vec3 color) {
-> >   float lightness;
-> >   // Si la tecla de control es 1 se calcula el promedio RGB
-> >   if (u_key==1){
-> > 		float I=(color.r + color.g + color.b) / 3.0; // Promedio de los tres componentes
-> > 		lightness = I;
-> > 	} else if (u_key==2){
-> >   // Si la tecla de control es 2 se calcula el valor luma
-> >   // Promedio ponderado de RGB con correccion gamma (Luma)
-> > 		float Y= dot(color, vec3(0.299, 0.587, 0.114)); // SDTV
-> > 		lightness = Y;
-> > 	}
-> >   return lightness;
-> > }
+> > ``` glsl | mosaic.frag
 > > 
 > > void main() {
-> >   vec2 uv = vTexCoord;
-> > 
-> >   //Invierte la posicion de la cordenada  para que la imagen no quede al reves
-> >   uv.y = 1.0 - uv.y;
-> > 
-> >   vec4 tex = texture2D(u_img, uv);
-> >   // Calculo de escala de grises
-> >   float gray =grayscale(tex.rgb);
+> >   // remap omCoord to [0.0, resolution] ∈ R
+> >   vec2 omCoord = vTexCoord * resolution;
+> >   // remap texCoord to [0.0, resolution] ∈ Z
+> >   vec2 texCoord = floor(omCoord);
+> >   // remap omCoord to [0.0, 1.0] ∈ R
+> >   omCoord = omCoord - texCoord;
+> >   // remap texCoord to [0.0, 1.0] ∈ R
+> >   texCoord = texCoord * vec2(1.0) / vec2(resolution);
+> >   // get vec4 image texel (may be used as color hash index by some apps)
+> >   vec4 imgTexel = texture2D(img, texCoord);
 > >   
-> >   float threshR = gray ;
-> >   float threshG = gray ;
-> >   float threshB = gray ;
+> >   //Calcular luma del texel
+> >   float luma = imgTexel.r *0.299 + imgTexel.g * 0.587 +  imgTexel.b*0.114;
+> >   //Si está activada la casilla de Mosaico 
+> >   if(om_on) {
+> >     
+> >     vec4 omTexel;
+> >    //Según el valor del luma calculado, se renderiza la imagen correspondiente
+> >     if(luma < 0.066 && luma >= 0.0){
+> >          gl_FragColor = texture2D(img0, omCoord);
 > > 
-> >   // Si la tecla de control es 0 se muestra la imagen original
-> >   if (u_key==0){
-> >     threshR = tex.r ;
-> >     threshG = tex.g ;
-> >     threshB = tex.b ;
+> >     }else if(luma < 0.132 && luma >= 0.066){
+> >          gl_FragColor = texture2D(img1, omCoord);
+> >         
+> >     }else if(luma < 0.198 && luma >= 0.132){
+> >          gl_FragColor = texture2D(img2, omCoord);
+> >         
+> >     }else if(luma < 0.264 && luma >= 0.198){
+> >          gl_FragColor = texture2D(img3, omCoord);
+> >         
+> >     }else if(luma < 0.33 && luma >= 0.264){
+> >          gl_FragColor = texture2D(img4, omCoord);
+> >         
+> >     }else if(luma < 0.396 && luma >= 0.33){
+> >          gl_FragColor = texture2D(img5, omCoord);
+> >         
+> >     }else if(luma < 0.462 && luma >= 0.396){
+> >          gl_FragColor = texture2D(img6, omCoord);
+> >         
+> >     }else if(luma < 0.528 && luma >= 0.462){
+> >          gl_FragColor = texture2D(img7, omCoord);
+> >         
+> >     }else if(luma < 0.594 && luma >= 0.528){
+> >          gl_FragColor = texture2D(img8, omCoord);
+> >         
+> >     }else if(luma < 0.66 && luma >= 0.594){
+> >          gl_FragColor = texture2D(img9, omCoord);
+> >         
+> >     }else if(luma < 0.726 && luma >= 0.66){
+> >          gl_FragColor = texture2D(img10, omCoord);
+> >         
+> >     }else if(luma < 0.792 && luma >= 0.726){
+> >          gl_FragColor = texture2D(img11, omCoord);
+> >          
+> >     }else if(luma < 0.858 && luma >= 0.792){
+> >          gl_FragColor = texture2D(img11, omCoord);
+> >          
+> >     }else if(luma < 0.924 && luma >= 0.858){
+> >          gl_FragColor = texture2D(img12, omCoord); 
+> >       
+> >     }else if(luma <= 1.0 && luma >= 0.924){
+> >          gl_FragColor = texture2D(img12, omCoord);
+> >         
+> >     }
+> >      
 > >   }
-> >   vec3 thresh = vec3(threshR, threshG, threshB);
-> > 
-> >   // Se renderiza la salida
-> >   gl_FragColor = vec4(thresh, 1.0);
-> > }
-> > 
-> > ```
-> > 
->
-> > :Tab title= C&oacute;digo Video
-> >
-> > ``` glsl | webcam.frag
-> > // Funcion para calculo de valor Luma de un color
-> > float luma(vec3 color) {
-> >   return dot(color, vec3(0.299, 0.587, 0.114));
-> > }
-> > 
-> > // Funcion para calculo del promedio RGB
-> > float grayRGB(vec3 color) {
-> >   float lightness=(color.r + color.g + color.b) / 3.0; // Promedio de los tres componentes
-> >   return lightness;
-> > }
-> > void main() {
-> > 
-> >   vec2 uv = vTexCoord;
-> >   // voltear la textura para mostrarse al derecho
-> >   uv = 1.0 - uv;
-> > 
-> >   vec4 tex = texture2D(tex0, uv);
-> > 
-> >    float gray;
-> >    //Dejar valores de color originales desde el inicio
-> > 
-> >    float threshR = tex.r ;
-> >    float threshG = tex.g ;
-> >    float threshB = tex.b ;
-> >   
-> >   // Si la tecla de control es 1 se calcula la el promedio RGB
-> >   if (u_key==1){
-> > 
-> >     gray =grayRGB(tex.rgb);
-> > 
-> >     threshR = gray ;
-> >     threshG = gray ;
-> >     threshB = gray ;
-> >   }else if (u_key==2){
-> >     // Si la tecla de control es 2 se calcula el valor luma 
-> >     gray = luma(tex.rgb);
-> > 
-> >     threshR = gray ;
-> >     threshG = gray ;
-> >     threshB = gray ;
+> >   else {
+> >   //Si no esta acitava la casilla de mosaico, se muestra la imagen original
+> >     gl_FragColor = imgTexel;
 > >   }
-> > 
-> >   vec3 thresh = vec3(threshR, threshG, threshB);
-> > 
-> >   // Se renderiza la salida
-> >   gl_FragColor = vec4(thresh, 1.0);
 > > }
 > > 
 > > ```
@@ -180,14 +154,9 @@ Por su parte la escala de grises ayuda a la comparaci&oacute;n de la luminosidad
 
 # Referencias y Bibliograf&iacute;a
 
-[Metodos de Conversion a Escala de Grises](https://www.researchgate.net/publication/277198540_Tecnicas_alternativas_para_la_conversion_de_imagenes_a_color_a_escala_de_grises_en_el_tratamiento_digital_de_imagenes)
+[Photomosaic logic base](https://github.com/computacionvisual2021/vc/blob/main/docs/sketches/workshop1/photomosaic2.js)
 
-[Image Grayscale Assets](https://github.com/visualcomputingcoders/visualcomputingcoders/blob/master/_projects/escala_grisesHW/escala_griseshw.js)
+[Image Photomosaic Fragment Shader Base](https://github.com/VisualComputing/hugo-vc/blob/main/content/sketches/photomosaic.frag)
 
-[Video Grayscale Assets ](https://github.com/processing/p5.js-website/blob/main/src/data/examples/assets/webcam.frag)
-
-[RGB Space Image](https://www.pngwing.com/es/free-png-sndev)
-
-[Sintesis Digital de Color Utilizando Tonos de Gris ](https://ninive.uaslp.mx/xmlui/bitstream/handle/i/2264/MCA1SDC00901.pdf?sequence=1&isAllowed=y#:~:text=La%20escala%20de%20grises%20se,gradaciones%20de%20este%20color%20puro.)
 
 > :ToCPrevNext
