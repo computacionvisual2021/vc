@@ -33,9 +33,9 @@ var showOryginalImageFlag = false;
 function initCaptureDevice() {
     try {
         myCapture = createCapture(VIDEO);
-        myCapture.size(320, 240);
+        myCapture.size(710, 400);
         myCapture.elt.setAttribute('playsinline', '');
-        // myCapture.hide();
+        myCapture.hide();
         // console.log(
         //     '[initCaptureDevice] capture ready. Resolution: ' +
         //     myCapture.width + ' ' + myCapture.height
@@ -46,7 +46,7 @@ function initCaptureDevice() {
 }
 
 function setup() {
-    createCanvas(640, 480); // we need some space...
+    createCanvas(710, 400); // we need some space...
     initCaptureDevice(); // and access to the camera
    
     gfx = createGraphics(asciiart_width, asciiart_height);
@@ -59,7 +59,7 @@ function setup() {
     textAlign(CENTER, CENTER); textFont('monospace', 8); textStyle(NORMAL);
     noStroke(); fill(255);
     
-    frameRate(30);
+    //frameRate(30);
 }
 
 function draw() {
