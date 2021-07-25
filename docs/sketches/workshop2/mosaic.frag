@@ -97,10 +97,11 @@ void main() {
     }else if(luma <= 1.0 && luma >= 0.924){
          gl_FragColor = texture2D(img12, omCoord);
         
+    }else{
+    gl_FragColor = texture2D(om, omCoord);
     }
      
-  }
-  else {
+  }else {
   //Si no esta acitava la casilla de mosaico, se muestra la imagen original
     gl_FragColor = imgTexel;
   }
