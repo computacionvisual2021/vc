@@ -56,7 +56,6 @@ function setup() {
     mosaic.setUniform('img11', img11);
     mosaic.setUniform('img12', img12);
     
-    
     //Mostrar en pantalla un deslizador para ajustar la resolución de la imagen y el mosaico a mostrar
     resolution = createSlider(10, 100, 30, 1);
     resolution.position(10, 50);

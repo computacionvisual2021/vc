@@ -3,49 +3,49 @@
 
 # Antecedentes
 
-El color no se considera como un atributo que tienen los objetos, sino como el resultado de un proceso visual entre la retina del ojo y el cerebro ya que el color se produce por la percepci&oacute;n de la luz. Debido a los tipos de conos fotoreceptores que poseen los animales, el humano en particular, se clasifican estos receptores en: los que responden a la luz roja del espectro visible, los que responden a la luz azul y los que responden a la luz verde. 
+El foto mosaico es una practica o método usado en la fotografía para constituir una imagen con base a pequeñas fotografias que encajan con el patrón y/o color de la imagen objetivo. Al detallar así la imagen resultado se revelan las pequeñas imagenes que la componene y al alejarse se ve más claramente la imagen objetivo. Usualmente los mosaicos son creados por computadora de dos maneras diferentes:
 
-Con base en esto se define el modelo de color RGB, el m&aacute;s conocido y utilizado. En este modelo cada color est&aacute; representado por tres valores: el rojo (R), verde (G) y azul (B); de manera convencional se puede ubicar este modelo de color en un espacio cartesiano de 3 ejes, donde cada uno corresponde a uno de los tres valores del modelo en el rango [0,255] como se ve en la siguiente imagen:
++ **Simple:** Cada parte de la imagen objetivo y cada imagen de la librería del mosaico son promediadas a un color, y se reemplazan las partes de la imagen objetivo con las imagenes de la librería cuyo color promedio sea más cercano.
+
++ **Avanzado:** Aquí no se compara un promedio de color sino el valor de cada pixel, por lo que cada zona se reemplaza con la imagen que menos diferencia con la original presente en su totalidad.
+
+El uso del método simple hace que se pierda resolución en la imagen objetivo, mientras que la solución avanzada puede mantener la resolución pero requiere muchos más recursos computacionales para su realización. A continuación un ejemplo de un fotomosaico para la imagen de un elefante compuesto por fotografias de distintos objetos y/o animales:
 
 <div>
 <p style = 'text-align:center;'>
-<img src="/docs/img/rgbSpace.png" width=500/>
+<img src="/docs/img/mosaicoElefante.png" width=500/>
 </p>
 </div>
 
-[RGB Space Image](https://www.pngwing.com/es/free-png-sndev)
+[Elephant Mosaic](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQkCJaNfiG-bcDQ9AsPMYkcghJmzyMozOimU-oJGR1U__VI7d4E5kWRz_aLxjAA990rPY&usqp=CAU)
 
-De esta manera el negro se representa como (0,0,0) y el blanco como (255,255,255); para el caso particular de los colores en escala de grises, estos se obtienen con valores id&eacute;nticos de R, G, y B. 
+En cuanto a los orígenes del foto-mosaico se le atribuye su creación por computadora a Joseph Francis en 1993 con su invensión del poster *Live from Bell Labs* inspirado en el trabajo del pintor y fotógrafo Charles (Chuck) Close en obras como "Lucas"(1986-1987) en donde los elementos del cuadro son marcas separadas entre si, que a la distancia dan la ilusión de ser un retrato realista. Joseph deseaba hacer algo similar pero con fotografías, por lo que creó un programa que alimentado con alrededor de 6 fotos escaneadas, controlaba la transparencia (canal alpha) de cada foto para que acomodará al resultado deseado, y así con su primer trabajo realizado, aumentó la popularidad de este nuevo concepto.
 
-Existen diversas t&eacute;cnicas de conversi&oacute;n a escala de grises a partir del modelo RGB. Desde el promedio, la tonalidad (basada en el modelo HSL), la luminosidad o Luma, entre otros; en el presente ejercicio se realizar&aacute;n implementaciones de los algoritmos de ***Promedio RGB y Luma***. El promedio RGB  es el m&eacute;todo m&aacute;s simple de lograr una conversi&oacute;n, ya que solo se necesita tomar los valores RGB de cada pixel y promediarlos, su formula es la siguiente:
+<div>
+<p style = 'text-align:center;'>
+<img src="/docs/img/Chuck_Close.jpg" width=500/>
+</p>
+</div>
 
-> :Formula  align=center
-> ```
-> Grey_{RGB}(i,j) = \frac{R (i, j) + G (i, j) + B (i, j)}{3}
-> ```
+["Lucas"(1986-1987)-Charles Close](https://upload.wikimedia.org/wikipedia/en/a/ae/Chuck_Close_2.jpg)
 
-Por su parte, el m&eacute;todo de la Luminosidad (o Luma) consiste en una veri&oacute;n m&aacute;s sofisticada que la del promedio, ya que se realiza una suma de las ponderaciones de los valores de los componentes R, G y B con base en que el ojo humano es m&aacute;as sensible al color verde que a los otros colores (por esto su ponderaci&oacute;n es mayor). Estos valores fueron  establecidos  a  trav&eacute;s  de la  recomendaci&oacute;n  Rec. 601 NTSC por la International Telecommunication Union - Radiocommunications.  
+<div>
+<p style = 'text-align:center;'>
+<img src="/docs/img/JosephPoster.jpg" width=500/>
+</p>
+</div>
 
-> :Formula  align=center
-> ```
-> Luma_{RGB}(i,j) = 0,299 * R (i, j) + 0,587 * G (i, j) + 0,114 * B (i, j)
-> ```
+[Live from Bell Labs(1993)-Joseph Francis](https://digitalartformcom.files.wordpress.com/2017/01/bellposter.jpg)
 
-A continuaci&oacute;n en la pesta&ntilde;a ***Imagen RGB y Luma*** se podr&aacute; visualizar la implementaci&oacute;n de los dos m&eacute;todos mencionados anteriormente aplicados a una imagen por medio de shadders en WEBGL, lo cual permite que se ejecute el c&oacute;digo directamente en la unidad de procesamiento gr&aacute;fica GPU. Se crea una textura con la imagen y a esa textura se le calcula el promedio RGB y luma seg&uacute;n el usuario especifique con las siguientes teclas:
+A partir de ese momento varios artistas toman la idea para representar imagenes como foto mosaicos, uno de los trabajos más destacados es **Gioconda Sapiens (1995)**, un foto-mosaico de la famosa mujer de Da Vinci compuesto por fotografías de 10.062 personas de 110 paises.
 
-| Tecla |         Resultado         |
-|:-----:|:-------------------------:|
-|   0   |   Imagen/Video Original   |
-|   1   | Imagen/Video Promedio RGB |
-|   2   |     Imagen/Video Luma     |
+El término *Photomosaic* se patenta por Robert Silvers en 1995 tras crear un algoritmo para generar foto mosaicos programáticamente cuya patente también se genero en 1997. Uno d elos fenómenos más recientes y posibles dentro de los mosaicos es el Video mosaico, cuyo concepto se situa en la generación de imagenes a partir de clips de videos.
 
-La representaci&oacute;n de la imagen convertida se visualizar&aacute; aplicada a una elipse y a un cubo que rota, con el &aacute;nimo de explorar una de las capacidades de WEBGL que es el manejo de elementos en 3D. De igual manera veremos como la luz puede afectar principalmente a el mencionado objeto 3D al pasar el cursor sobre el mismo y ver como la luz de distorsiona sobre el objeto (se observa mejor al dejar el cursor est&aacute;tico en un lugar cerca al cubo).
+A continuaci&oacute;n en la pesta&ntilde;a ***Imagen Foto-Mosaico*** se podr&aacute; visualizar la implementaci&oacute;n de la técnica sencilla para la generación de un foto mosaico de una imagen base por medio de shaders en WEBGL, lo cual permite que se ejecute el c&oacute;digo directamente en la unidad de procesamiento gr&aacute;fica GPU. Aquí se crea una textura con la imagen base y se permite que el ususario elija la resolución o cantidad de imagenes que desea conformen el ancho/alto del foto mosaico por medio de un deslizador. El usuario incialmente verá la imagen original en la resolución especificada y podrá cambiar al foto-mosaico generado por el algoritmo, activando la casilla de verificación "Mosaic". Se hace uso de un dataset de imagenes previamente ordenado con relación a su luminosidad, puesto que el algoritmo relaciona la luminosidad de un texel con la imagen correspondiente.
 
-En la pesta&ntilde;a ***Video RGB y Luma*** se visualizan las mismas conversiones pero esta vez aplicadas a la captura de video por c&aacute;mara en tiempo real. El video responde a los mismos comandos por teclas mencionados anteriormente, igualmente aplicando las texturas a un shader de WEBGL.
+Por su parte, la pesta&ntilde;a ***Instrucciones*** describe un paso a paso del proceso de la creación del foto mosaico; Iniciando con la creaci&oacute;n de los shaders respectivos a partir de los ***Fragment Shader y Vertex Shader*** correspondientes, una vez creado el canvas tipo WEBGL se pasan los datos de imagen original y el dataset de imagenes al fragment shader para que identifique seg&uacute;n la luminosidad que imagen debe renderizar en pantalla. 
 
-Por su parte, la pesta&ntilde;a ***Instrucciones*** describe un paso a paso del proceso de conversi&oacute;n de los elementos mencionados (imagen y video) ya que son pasos en su mayor&iacute;a similares; Iniciando con la creaci&oacute;n de los shaders respectivos a partir de los ***Fragment Shader y Vertex Shader*** correspondientes, una vez creado el canvas tipo WEBGL se pasan los datos de imagen o video al fragment shader para que identifique seg&uacute;n la tecla presionada por el usuario que tipo de transformaci&oacute;n desea. Por &uacute;ltimo el ***Fragment Shader*** calcula la escala de grises deseada y devuelve el renderizado de la imagen/video para ser mostrada.
-
-Finalmente, las pesta&ntilde;as ***C&oacute;digo Imagen y C&oacute;digo Video*** muestra el c&oacute;digo de implementaci&oacute;n para los fragment shaders usados en la imagen y el video respectivamente, ambos tienen comentarios de su funcionamiento para mayor comprensi&oacute;n.
+Finalmente, la pesta&ntilde;a ***C&oacute;digo*** muestra el c&oacute;digo de implementaci&oacute;n para el fragment shader (que contiene la lógica de renderizado) usado con comentarios de su funcionamiento para mayor comprensi&oacute;n.
 
 # Soluci&oacute;n y Resultados
 
@@ -53,6 +53,7 @@ Finalmente, las pesta&ntilde;as ***C&oacute;digo Imagen y C&oacute;digo Video***
 > > :Tab title= Imagen Foto-Mosaico
 > > 
 > > > :P5 sketch=/docs/sketches/workshop2/mosaic.js, width=620, height=620
+> >
 >
 > > :Tab title= Instrucciones
 > > 
@@ -147,12 +148,22 @@ Finalmente, las pesta&ntilde;as ***C&oacute;digo Imagen y C&oacute;digo Video***
 > > ```
 > > 
 
-Se mostr&oacute; exitosamente como es la implementaci&oacute;n l&oacute;gica y fundamentaci&oacute;n te&oacute;rica de la conversi&oacute;n a escala de grises por medio del promedio RGB y c&aacute;lculo de Luma. A pesar de haber mostrado un acercamiento m&iacute;nimo al renderizado 3D, se estima y se evidencia la alta capacidad para la representaci&oacute;n de objetos con las texturas deseadas en un entorno espacial definido; las principales aplicaciones de lo mostrado son relacionadas con la creaci&oacute;n de videojuegos e incluso de realidad virtual. Sin embargo cabe la posibilidad de la incursi&oacute;n en rubros como la medicina en el diagn&oacute;stico de imagenes, al pensar en una representaci&oacute;n 3D del cuerpo humano y sus organos internos con texturas analizadas en laboratorio. De igual manera las simulaciones en cualquier &aacute;mbito pueden ser ejecutadas con ayuda de los shaders.
+Se mostr&oacute; exitosamente como es la implementaci&oacute;n l&oacute;gica y fundamentaci&oacute;n te&oacute;rica de la creación de un foto mosaico de una manera sencilla. A pesar de esto y de que la aproximación obtenida no es muy cercana a la imagen original, se concluye que influyen diversos factores para este resultado:
 
-Por su parte la escala de grises ayuda a la comparaci&oacute;n de la luminosidad de los colores, lo que permite la clasificaci&oacute;n de los mismos y tambi&eacute;n a distinguir los grados de claridad en las atenuaciones y degradados de color. Todas estas son parte fundamental en el dise&ntilde;o gr&aacute;fico y sus lineas de desempe&ntilde;o. Una de las aplicaciones m&aacute;s novedosa consiste en la recuperaci&oacute;n de imagenes con sus colores originales a partir de su versi&oacute;n en escala de grises, sin embargo para esto hay que ajustar el brillo y el componenete gamma (Separaci&oacute;n entre el color azul y el negro), entre otros. Tal como lo muestra el [estudio realizado por Jes&uacute;s Gustavo folres Era&ntilde;a](https://ninive.uaslp.mx/xmlui/bitstream/handle/i/2264/MCA1SDC00901.pdf?sequence=1&isAllowed=y#:~:text=La%20escala%20de%20grises%20se,gradaciones%20de%20este%20color%20puro.).
++ El dataset de imagenes es demasiado pequeño (12 imágenes) por lo que entre menos definición más irreconocible se vuelve el resultado.
+
++ El ordenamiento previo de las imagenes a usar tiene altas probabilidades de ser inexacto por lo que resulta útil realizar un algoritmo de ordenamiento de luminosidad para el dataset de imagenes, con el ánimo de relacionar correctamente las imagenes a renderizar con los valores de la luminosidad original. 
+
+Como aplicación en el ámbito artístico se observa un alto potencial de integración con sistemas de inteligencia artificial y redes neuronales para poder buscar y clasificar imagenes adecuadamente para la construcción de foto mosaicos.  Sin embargo cabe la posibilidad de la incursi&oacute;n en rubros como la medicina en la terapia con mosaicos de imagenes. De igual manera las simulaciones y/o desarrollo de videojuegos pueden ser ejecutadas con ayuda de foto mosaicos que le pueden brindar un estilo especial a productos audiovisuales.
 
 
 # Referencias y Bibliograf&iacute;a
+
+[Historia del Foto-Mosaico](https://digitalartform.com/2017/01/05/history-of-photo-mosaics/)
+
+[Mosaico Fotográfico](https://en.wikipedia.org/wiki/Photographic_mosaic)
+
+[Chuck Close](https://en.wikipedia.org/wiki/Chuck_Close)
 
 [Photomosaic logic base](https://github.com/computacionvisual2021/vc/blob/main/docs/sketches/workshop1/photomosaic2.js)
 

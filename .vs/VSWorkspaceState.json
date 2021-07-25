@@ -5,10 +5,9 @@
     "\\docs",
     "\\docs\\md",
     "\\docs\\md\\docs",
-    "\\docs\\md\\docs\\workshops",
     "\\docs\\sketches",
-    "\\docs\\sketches\\workshop1"
+    "\\docs\\sketches\\workshop2"
   ],
-  "SelectedNode": "\\docs\\md\\docs\\workshops\\photomosaic.md",
+  "SelectedNode": "\\docs\\sketches\\workshop2\\mosaic.js",
   "PreviewInSolutionExplorer": false
 }
