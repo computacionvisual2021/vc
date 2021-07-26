@@ -8,6 +8,7 @@ precision mediump float;
 
 uniform sampler2D tex;
 
+// Implementación Operador a nivel de bits
 int getBit(int n, int a) {
   float value = float(n);
   for(float i = 27.0; i >= 0.0; i -= 1.0) {
@@ -21,6 +22,7 @@ int getBit(int n, int a) {
   return 0;
 }
 
+// Reducción tamaño de 8x8 a 5x5 y activación brilo
 float character(int n, vec2 p)
 {
     p = floor(p*vec2(4.0, -4.0) + 2.5);
@@ -39,19 +41,24 @@ void main() {
   vec2 pix = gl_FragCoord.xy;
   pix.y = 393.0*2.0 - pix.y;
   vec2 resol = vec2(393.0*2.0, 393.0*2.0);
+    // Partición de la imagen en 8x8 pixeles
     vec3 col = texture2D(tex, floor(pix/8.0)*8.0/resol).rgb;    
-
-    float gray = 0.3 * col.r + 0.59 * col.g + 0.11 * col.b;
+   // Calculo LUMA
+    float luma = 0.3 * col.r + 0.59 * col.g + 0.11 * col.b;
+    // Máscaras a aplicar dependiendo del LUMA
+    // n = codificación del caracter en entero
+    // página para codificación de caracteres: http://thrill-project.com/archiv/coding/bitmap/
 
     int n =  4096;                // .
-    if (gray > 0.2) n = 65600;    // :
-    if (gray > 0.3) n = 332772;   // *
-    if (gray > 0.4) n = 15255086; // o 
-    if (gray > 0.5) n = 23385164; // &
-    if (gray > 0.6) n = 15252014; // 8
-    if (gray > 0.7) n = 13199452; // @
-    if (gray > 0.8) n = 11512810; // #
+    if (luma > 0.2) n = 65600;    // :
+    if (luma > 0.3) n = 332772;   // *
+    if (luma > 0.4) n = 15255086; // o 
+    if (luma > 0.5) n = 23385164; // &
+    if (luma > 0.6) n = 15252014; // 8
+    if (luma > 0.7) n = 13199452; // @
+    if (luma > 0.8) n = 11512810; // # 
 
+    //Cálculo de separación entre caracteres
     vec2 p = mod(pix/4.0, 2.0) - vec2(1.0);
 
     col = vec3(character(n, p));

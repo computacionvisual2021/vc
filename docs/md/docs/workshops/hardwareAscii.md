@@ -14,20 +14,45 @@ Los orígenes del Ascii Art, como los de tantas otras disciplinas, son remotos. 
 </p>
 </div>
 
+[Mariposa, Lewis Carrol (1998)](https://ceslava.com/blog/ascii-art-la-historia-del-dibujo-con-texto-typewriter-art/)
+
+Lewis Carrol, En 1898 dibujó con su máquina de escribir esta mariposa utilizando sólo corchetes, puntos, paréntesis, barras de dividir, asteriscos y letras o.
+
 La técnica de arte Ascii Art es ampliamente utilizada por artistas, aficionados, hackers. Un ejemplo especialmente interesante de uso y desarrollo creativo del arte ASCII son las obras creadas por el grupo "ASCII Art Ensemble". El grupo, formado por Walter van der Cruijsen, Luka Frelih, Vuk Cosic, fue fundado en 1998. Los miembros del "ASCII Art Ensemble" crearon un software para "codificar" imágenes en movimiento en piezas de arte ASCII animadas (secuenciales). 
 
-En la implementación realizada del shader se segmenta la imagen en bloques de 8x8 pixeles y se procede a hacer el cálculo del brillo para cada uno de ellos. Posteriormente, se determina que caracter ASCII se debe usar dependiendo de la densidad calculada para cada caracter y es reemplazado en los pixeles calculados inicialmente.
+Desde el punto de vista de evolución de la gráfica computarizada, el Arte ASCII replantea la observación tradicional de una imagen en base al conjunto de elementos pictóricos que la conforman (ver: píxel), un efecto óptico similar al del puntillismo. Así pues, a una mayor distancia del observador, la imagen hecha en Arte ASCII adquiere mayor definición; exactamente lo opuesto a lo que sucede cuando, al observar con lupa una imagen impresa en un diario, la distancia entre los píxeles que la conforman se hace evidente y la imagen se desvirtúa.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="/docs/img/Mrbeen.jpg" width=350 height=400/>
+</p>
+</div>
+
+[Mr bean, Ascii Art](https://i.blogs.es/65659d/mrbean/1366_2000.jpg)
 
 # Solución y Resultados
 
 > :Tabs
-> > :Tab title= Visualizacion Imagen
+> > :Tab title= Ascii Art Imagen
 > > 
 > > > :P5 sketch=/docs/sketches/workshop2/Ascii.js, width=600, height=500
 >
-> > :Tab title= Visualizacion Video
+> > :Tab title= Ascii Art Video
 > > 
 > > > :P5 sketch=/docs/sketches/workshop2/Ascii2.js, width=670, height=400
+>
+> > :Tab title= Instrucciones
+> > 
+> > | No. | Descripci&oacute;n |
+> > |---|---|
+> > | 1 | Precargar Shader para imagen con el vertex y fragment shader. |
+> > | 2 | Crear canvas de WEBGL. |
+> > | 3 | Crear el shader a partir del precargado. |
+> > | 4 | Pasar datos de imagen base o cámara,resolución y activación del Fragment Shader. |
+> > | 5 | El fragment shader carga la textura |
+> > | 6 | Calculo del LUMA en cada bloque de pixeles |
+> > | 7 | Según el valor LUMA calculado se escoge el caracter a renderizar (dentro del conjunto previamente dado) |
+> > | 8 | Renderizar el caracter correspondiente al valor de luminosidad en la pantalla en la resolución de la imagen deseada. |
 >
 > > :Tab title= Ascii2.js
 > >
@@ -36,7 +61,7 @@ En la implementación realizada del shader se segmenta la imagen en bloques de 8
 > > // this variable will hold our webcam video
 > > let cam;
 > > function preload() {
-> >     // load the shader
+> >     // Precargar el  shader
 > >     theShader = loadShader('/vc/docs/sketches/workshop2/texturaAscii.vert', '/vc/docs/sketches/workshop2/> > texturaAscii.frag');
 > > }
 > > 
@@ -52,10 +77,10 @@ En la implementación realizada del shader se segmenta la imagen en bloques de 8
 > > }
 > > 
 > > function draw() {
-> >     // shader() sets the active shader with our shader
+> >     // shader() Activación del Shader con nuestro Shader
 > >     shader(theShader);
 > > 
-> >     // passing cam as a texture
+> >     // Se pasa la Cámara (cam) como textura
 > >     theShader.setUniform('tex', cam);
 > > 
 > >     // rect gives us some geometry on the screen
@@ -76,7 +101,7 @@ En la implementación realizada del shader se segmenta la imagen en bloques de 8
 > >#endif
 > >
 > >uniform sampler2D tex;
-> >
+> >// Implementación Operador a nivel de bits
 > >int getBit(int n, int a) {
 > >  float value = float(n);
 > >  for(float i = 27.0; i >= 0.0; i -= 1.0) {
@@ -89,7 +114,7 @@ En la implementación realizada del shader se segmenta la imagen en bloques de 8
 > >  }
 > >  return 0;
 > >}
-> >
+> > // Reducción tamaño de 8x8 a 5x5 y activación brillo
 > >float character(int n, vec2 p)
 > >{
 > >    p = floor(p*vec2(4.0, -4.0) + 2.5);
@@ -108,10 +133,13 @@ En la implementación realizada del shader se segmenta la imagen en bloques de 8
 > >  vec2 pix = gl_FragCoord.xy;
 > >  pix.y = 393.0*2.0 - pix.y;
 > >  vec2 resol = vec2(393.0*2.0, 393.0*2.0);
+> >    // Partición de la imagen en 8x8 pixeles
 > >    vec3 col = texture2D(tex, floor(pix/8.0)*8.0/resol).rgb;    
-> >
+> >    // Calculo LUMA
 > >    float gray = 0.3 * col.r + 0.59 * col.g + 0.11 * col.b;
-> >
+> >    // Máscaras a aplicar dependiendo del LUMA
+> >    // n = codificación del caracter en entero
+> >    // página para codificación de caracteres: http://thrill-project.com/archiv/coding/bitmap/
 > >    int n =  4096;                // .
 > >    if (gray > 0.2) n = 65600;    // :
 > >    if (gray > 0.3) n = 332772;   // *
@@ -120,7 +148,8 @@ En la implementación realizada del shader se segmenta la imagen en bloques de 8
 > >    if (gray > 0.6) n = 15252014; // 8
 > >    if (gray > 0.7) n = 13199452; // @
 > >    if (gray > 0.8) n = 11512810; // #
-> >
+> >    
+> >    //Cálculo de separación entre caracteres
 > >    vec2 p = mod(pix/4.0, 2.0) - vec2(1.0);
 > >
 > >    col = vec3(character(n, p));
@@ -157,9 +186,41 @@ En la implementación realizada del shader se segmenta la imagen en bloques de 8
 > >  gl_Position = positionVec4;
 > >}
 >
-Creditos de: [Ascii Art - MovAX13h](https://www.shadertoy.com/view/lssGDjl)
+En la implementación realizada del shader se particiona la imagen en bloques de 8x8 pixeles y se procede a hacer el cálculo del LUMA para cada uno de ellos. Posteriormente, teniendo el cuanta el LUMA obtenido en cada bloque se determina que caracter ASCII se debe usar de acuerdo a la codificación realizada previamente de algunos caracteres ASCII. Posterior mente, el shader hace un barrido bloque a bloque y de acuerdo si es un bloque con brillo 1 es reemplazado por el caracter asignado, si el brillo de este bloque es 0, se deja el espacio.
+
+### Caracteres ASCII utilizados en la implementación
+<div>
+<p style = 'text-align:center;'>
+<img src="/docs/img/caracteresAscii.png" width=200 height=180/>
+</p>
+</div>
+
+### Herramienta mapeo caracteres
+<div>
+<p style = 'text-align:center;'>
+<img src="/docs/img/bitmap.png" width=200 height=180/>
+</p>
+</div>
+
+### Ejemplo caracter (#)
+<div>
+<p style = 'text-align:center;'>
+<img src="/docs/img/numeral.png" width=200 height=180/>
+</p>
+</div>
+
+Si bien, esta herramienta de mapeo de los caracteres facilita el proceso de la implementación del Ascii Art, limita el uso de caracteres a los que sean representables en la matriz de 5 x 5, es decir que caracteres de otros lenguajes que utilicen caracteres curvos o figuras abstractas no podrían ser utilizados en esta implementación.
+
+# Referencias y Bibliograf&iacute;a 
+
+[Ascii Art - MovAX13h](https://www.shadertoy.com/view/lssGDjl)
+
 [Adam Ferris](https://github.com/aferriss/p5jsShaderExamples)
+
+[Bitmap](http://thrill-project.com/archiv/coding/bitmap/)
+
 [Camilo Gómez](https://drive.google.com/file/d/1Fg_p77X0wvyK4cY4txpmdsc743M2FCIz/view)
+
 [Imagen Mariposa](https://ceslava.com/blog/ascii-art-la-historia-del-dibujo-con-texto-typewriter-art/)
 
 > :ToCPrevNext
