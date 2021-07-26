@@ -4,10 +4,10 @@
     "\\docs",
     "\\docs\\md",
     "\\docs\\md\\docs",
+    "\\docs\\md\\docs\\workshops",
     "\\docs\\sketches",
     "\\docs\\sketches\\workshop2",
     "\\docs\\sketches\\workshop3"
   ],
-  "SelectedNode": "\\docs\\sketches\\workshop2\\PerformanceHardGrayScale.js",
   "PreviewInSolutionExplorer": false
 }
