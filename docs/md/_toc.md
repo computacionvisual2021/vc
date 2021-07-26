@@ -19,7 +19,9 @@
 > > > [Mascaras de Convolución](/docs/workshops/hardwareMascaras)
 > > > [Ascii Art](/docs/workshops/hardwareAscii)
 > > > [Foto-Mosaico](/docs/workshops/hardwareMosaic)
-> > > [Desempeño Computacional](/docs/workshops/hardwarePerformance)
+> > > [Desempeño Computacional Convolución](/docs/workshops/hardwarePerformance)
+> > > [Desempeño Computacional RGB y Luma](/docs/workshops/hardwarePerformance2)
+> > > [Desempeño Computacional Ascii-Art](/docs/workshops/hardwarePerformance3)
 > > > [Conclusiones y Trabajo Futuro](/docs/workshops/hardwareConclusion)
 >
 > > :Collapse label=Rendering
