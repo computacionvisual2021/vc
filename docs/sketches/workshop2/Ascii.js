@@ -1,35 +1,22 @@
-let photo;
-let font;
-let letters = " .,;xe$";  
-let charW = 6;            
-let charH = 9;            
-let toneDiv = 100.0 / letters.length;
+let asciiShader;
+let shaderTexture;
+
 
 function preload() {
-    photo = loadImage( "/vc/docs/img/blue-eyes.jpg" );
-    font = loadFont( "/vc/docs/sketches/workshop2/Inconsolata-Regular.ttf" );
+  img = loadImage('/vc/docs/img/cat.jpg');
+  asciiShader = loadShader('/vc/docs/sketches/workshop2/texturaAscii.vert', '/vc/docs/sketches/workshop2/texturaAscii.frag');
+}
+
+function setup() {
+  createCanvas(768, 500, WEBGL);
+  shaderTexture = createGraphics(700, 800, WEBGL);
+  shaderTexture.noStroke();
 }
 
 function draw() {
-    image(photo, 0, 0, 200, 120);
-  }
-
-function setup() {
-    createCanvas(670, 400);
-    background(0);
-    fill(255);
-    textFont( font, 14 );
-    translate(1,10);      
-
-    photo.resize( photo.width/charW, photo.height/charH );
-
-    for (let y=0;  y<photo.height;  y++) {
-        for (let x=0;  x<photo.width;  x++) {
-            let col = photo.get( x, y );
-            let tone = lightness(col) / toneDiv;
-            let letter = letters.charAt( tone );
-
-            text( letter, x*charW, y*charH );
-        }
-    }
+  shaderTexture.shader(asciiShader);
+  asciiShader.setUniform('tex', img);
+  texture(shaderTexture);
+  shaderTexture.rect(0,0,500,500);
+  rect(-500,-500/2.0,500,500)
 }
