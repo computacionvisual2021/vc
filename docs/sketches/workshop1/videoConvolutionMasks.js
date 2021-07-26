@@ -1,4 +1,4 @@
-let videoPath = "/vc/docs/img/mylivewallpapers.com-Fire-N-Water-Wolves.mp4";
+let videoPath = "/vc/docs/img/mandrill.webm";
 let videoWidth = 700;
 let videoHeight = 314;
 
@@ -97,6 +97,7 @@ var videoConverted = new p5((p) => {
 		p.createCanvas(videoWidth, videoHeight);
 		p.pixelDensity(1);
 		video = p.createVideo([videoPath]);
+		video.loop();
 		video.hide();
 	}
 
