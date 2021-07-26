@@ -13,9 +13,12 @@ A continuaci&oacute;n se visualizan las correspondientes conversiones en video p
 
 ## Hardware
 
+> :P5 sketch=/docs/sketches/workshop2/PerformanceHardAscii.js, width=710, height=700
+
 ## Software
 
-> :P5 sketch=/docs/sketches/workshop2/PerformanceSoftAscii.js, width=720, height=680
+[comment]: <> (> :P5 sketch=/docs/sketches/workshop2/PerformanceSoftAscii.js, width=720, height=680)
+
 
 ## Resultados
 

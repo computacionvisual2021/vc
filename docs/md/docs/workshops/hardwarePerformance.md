@@ -25,7 +25,8 @@ En el caso de la implementaci&oacute;n por ***Software***, el usuario podr&aacut
 
 ## Software
 
-> :P5 sketch=/docs/sketches/workshop2/PerformanceSoftConvolMasks.js, width=710, height=710
+[comment]: <> (> :P5 sketch=/docs/sketches/workshop2/PerformanceSoftConvolMasks.js, width=710, height=710)
+
 
 ## Resultados
 
