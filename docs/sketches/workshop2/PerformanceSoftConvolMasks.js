@@ -1,6 +1,7 @@
 let videoPath = "/vc/docs/img/mandrill.webm";
 let videoWidth = 700;
 let videoHeight = 410;
+let fpsTotal = 0.0;//Acumulador de valores de fps para calculo del promedio
 
 const kernels = {
 	blur: [
@@ -94,7 +95,7 @@ var videoConverted = new p5((p) => {
 	let videoBlue = [];
 
 	p.setup = () => {
-		p.createCanvas(700, 600);
+		p.createCanvas(700, 650);
 		p.pixelDensity(1);
 		video = p.createVideo([videoPath]);
 		video.size(700,410);
@@ -189,13 +190,15 @@ var videoConverted = new p5((p) => {
 		video.updatePixels();
 		p.image(video, 0, 0);
 
+		//Muestra valores de rendimiento en pantalla
 		p.textSize(30);
-		p.fill(255,255,255);
-		p.text("FPS actual: " + p.frameRate(), 50, 450);
-		p.text("Cantidad frames totales: " + p.frameCount, 50, 490);
-		p.text("Tiempo (ms) entre el frame anterior y el actual: ", 50, 530);
-		p.text(p.deltaTime , 50, 570);
-		
+		p.fill(255, 255, 255);
+		p.text("FPS actual: " + p.frameRate(), 50, 450);//fps
+		p.text("Cantidad frames totales: " + p.frameCount, 50, 490);//Cantidad de frames
+		p.text("Tiempo (ms) entre el frame anterior y el actual: ", 50, 530);// Tiempo entre frames
+		p.text(p.deltaTime, 50, 570);
+		fpsTotal += p.frameRate();//Se acumula el valor de fps para calcular el promedio
+		p.text("FPS Promedio: " + fpsTotal / p.frameCount, 50, 610);//Promedio de fps
 	}
 
 	

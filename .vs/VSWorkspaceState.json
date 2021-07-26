@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.codedoc",
     "\\docs",
     "\\docs\\md",
     "\\docs\\md\\docs",
     "\\docs\\sketches",
-    "\\docs\\sketches\\workshop2"
+    "\\docs\\sketches\\workshop2",
+    "\\docs\\sketches\\workshop3"
   ],
-  "SelectedNode": "\\.codedoc\\build.ts",
+  "SelectedNode": "\\docs\\sketches\\workshop2\\PerformanceHardGrayScale.js",
   "PreviewInSolutionExplorer": false
 }

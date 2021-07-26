@@ -29,6 +29,7 @@ var ascii_arr;
 
 var showOryginalImageFlag = false;
 
+let fpsTotal = 0.0;//Acumulador de valores de fps para calculo del promedio
 
 function initCaptureDevice() {
     try {
@@ -46,7 +47,7 @@ function initCaptureDevice() {
 }
 
 function setup() {
-    createCanvas(710, 600); // we need some space...
+    createCanvas(710, 650); // we need some space...
     
     initCaptureDevice(); // and access to the camera
 
@@ -77,14 +78,17 @@ function draw() {
         if (showOryginalImageFlag) image(myCapture, 0, 0, width, height);
 
         myAsciiArt.typeArray2d(ascii_arr, this,0,0,700,400);
-        
+        //Cambiar estilo del texto para mostrar las mediciones de fps en pantalla
         textSize(25);
         textAlign(LEFT);
         fill(255);
-        text("FPS actual: " + frameRate(), 50, 450);
-        text("Cantidad frames totales: " + frameCount, 50, 490);
-        text("Tiempo (ms) entre el frame anterior y el actual: ", 50, 530);
-        text(deltaTime, 50, 570);/**/
+        text("FPS actual: " + frameRate(), 50, 450);//fps
+        text("Cantidad frames totales: " + frameCount, 50, 490);//Cantidad de frames
+        text("Tiempo (ms) entre el frame anterior y el actual: ", 50, 530);// Tiempo entre frames
+        text(deltaTime, 50, 570);
+        fpsTotal += frameRate();//Se acumula el valor de fps para calcular el promedio
+        text("FPS Promedio: " + fpsTotal / frameCount, 50, 610);//Promedio de fps
+        //Volver a las condiciones necesarias para el ascii
         textSize(8);
         textAlign(CENTER,CENTER);
         fill(255);
