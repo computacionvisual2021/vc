@@ -48,11 +48,11 @@ Desde el punto de vista de evolución de la gráfica computarizada, el Arte ASCI
 > > | 1 | Precargar Shader para imagen con el vertex y fragment shader. |
 > > | 2 | Crear canvas de WEBGL. |
 > > | 3 | Crear el shader a partir del precargado. |
-> > | 4 | Pasar datos de imagen base o cámara,resolución y activación del Fragment Shader. |
+> > | 4 | Pasar datos de imagen base o cámara, y activación del Fragment Shader. |
 > > | 5 | El fragment shader carga la textura |
 > > | 6 | Calculo del LUMA en cada bloque de pixeles |
 > > | 7 | Según el valor LUMA calculado se escoge el caracter a renderizar (dentro del conjunto previamente dado) |
-> > | 8 | Renderizar el caracter correspondiente al valor de luminosidad en la pantalla en la resolución de la imagen deseada. |
+> > | 8 | Renderizar el caracter correspondiente al valor de luminosidad calculado para cada bloque de pixeles. |
 >
 > > :Tab title= Ascii2.js
 > >
@@ -202,7 +202,9 @@ En la implementación realizada del shader se particiona la imagen en bloques de
 </p>
 </div>
 
-### Ejemplo caracter (#)
+[Bitmap](http://thrill-project.com/archiv/coding/bitmap/)
+
+### Ejemplo caracter \#
 <div>
 <p style = 'text-align:center;'>
 <img src="/docs/img/numeral.png" width=200 height=180/>
@@ -210,6 +212,18 @@ En la implementación realizada del shader se particiona la imagen en bloques de
 </div>
 
 Si bien, esta herramienta de mapeo de los caracteres facilita el proceso de la implementación del Ascii Art, limita el uso de caracteres a los que sean representables en la matriz de 5 x 5, es decir que caracteres de otros lenguajes que utilicen caracteres curvos o figuras abstractas no podrían ser utilizados en esta implementación.
+
+## Aplicaciones Ascii Art
+
+El **Ascii Art** Art es utilizado cuando no es posible la transmisión o la impresión de imágenes en las configuraciones de equipos computarizados, tales como maquinillas, teletipos y equipos de visualización (consolas y terminales) que no cuentan con tarjetas de proceso gráfico. Además, el **Ascii Art** ha servido como lenguaje fuente para representar logos de compañías y productos, para crear diagramas procedimentales de flujo de operaciones y también en el diseño de los primeros videojuegos. Programas editores de texto especializados tal como IMG2TXT o JPG2TXT, están diseñados para dibujar figuras geométricas y rellenar áreas de luz y sombra con una combinación de caracteres basándose en algoritmos matemáticos.
+
+<div>
+<p style = 'text-align:center;'>
+<img src="/docs/img/diagrama.png" width=500 height=480/>
+</p>
+</div>
+
+[Diagrama UML con Ascii Art](https://coderwall.com/p/nsuzva/uml-tools)
 
 # Referencias y Bibliograf&iacute;a 
 
@@ -222,5 +236,11 @@ Si bien, esta herramienta de mapeo de los caracteres facilita el proceso de la i
 [Camilo Gómez](https://drive.google.com/file/d/1Fg_p77X0wvyK4cY4txpmdsc743M2FCIz/view)
 
 [Imagen Mariposa](https://ceslava.com/blog/ascii-art-la-historia-del-dibujo-con-texto-typewriter-art/)
+
+[Diagrama UML con Ascii Art](https://coderwall.com/p/nsuzva/uml-tools)
+
+[Mr bean, Ascii Art](https://i.blogs.es/65659d/mrbean/1366_2000.jpg)
+
+[Ascii Art, Wikipedia](https://es.wikipedia.org/wiki/Arte_ASCII)
 
 > :ToCPrevNext
