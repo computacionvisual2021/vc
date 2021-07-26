@@ -1,4 +1,4 @@
-// Estas son definiciones necesarias que le permiten a la tarjeta gráfica saber cómo representar el sombreador
+// Estas son definiciones necesarias que le permiten a la tarjeta grï¿½fica saber cï¿½mo representar el sombreador
 #ifdef GL_ES
 precision mediump float;
 #endif
