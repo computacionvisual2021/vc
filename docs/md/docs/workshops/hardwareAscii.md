@@ -186,7 +186,7 @@ Desde el punto de vista de evolución de la gráfica computarizada, el Arte ASCI
 > >  gl_Position = positionVec4;
 > >}
 >
-En la implementación realizada del shader se particiona la imagen en bloques de 8x8 pixeles y se procede a hacer el cálculo del LUMA para cada uno de ellos. Posteriormente, teniendo el cuanta el LUMA obtenido en cada bloque se determina que caracter ASCII se debe usar de acuerdo a la codificación realizada previamente de algunos caracteres ASCII. Posterior mente, el shader hace un barrido bloque a bloque y de acuerdo si es un bloque con brillo 1 es reemplazado por el caracter asignado, si el brillo de este bloque es 0, se deja el espacio.
+En la implementación realizada del shader se particiona la imagen en bloques de 8x8 pixeles y se procede a hacer el cálculo del LUMA para cada uno de ellos. Posteriormente, teniendo el cuenta el cálculo del LUMA obtenido en cada bloque se determina que caracter ASCII se debe usar de acuerdo a la codificación realizada previamente de algunos caracteres ASCII. Posteriormente, el shader hace un barrido bloque a bloque y de acuerdo si es un bloque con brillo 1 es reemplazado por el caracter asignado, si el brillo de este bloque es 0, se deja el espacio.
 
 ### Caracteres ASCII utilizados en la implementación
 <div>
@@ -215,7 +215,7 @@ Si bien, esta herramienta de mapeo de los caracteres facilita el proceso de la i
 
 ## Aplicaciones Ascii Art
 
-El **Ascii Art** Art es utilizado cuando no es posible la transmisión o la impresión de imágenes en las configuraciones de equipos computarizados, tales como maquinillas, teletipos y equipos de visualización (consolas y terminales) que no cuentan con tarjetas de proceso gráfico. Además, el **Ascii Art** ha servido como lenguaje fuente para representar logos de compañías y productos, para crear diagramas procedimentales de flujo de operaciones y también en el diseño de los primeros videojuegos. Programas editores de texto especializados tal como IMG2TXT o JPG2TXT, están diseñados para dibujar figuras geométricas y rellenar áreas de luz y sombra con una combinación de caracteres basándose en algoritmos matemáticos.
+El **Ascii Art**  es utilizado cuando no es posible la transmisión o la impresión de imágenes en las configuraciones de equipos computarizados, tales como maquinillas, teletipos y equipos de visualización (consolas y terminales) que no cuentan con tarjetas de proceso gráfico. Además, el **Ascii Art** ha servido como lenguaje fuente para representar logos de compañías y productos, para crear diagramas procedimentales de flujo de operaciones y también en el diseño de los primeros videojuegos. Programas editores de texto especializados tal como IMG2TXT o JPG2TXT, están diseñados para dibujar figuras geométricas y rellenar áreas de luz y sombra con una combinación de caracteres basándose en algoritmos matemáticos.
 
 <div>
 <p style = 'text-align:center;'>
