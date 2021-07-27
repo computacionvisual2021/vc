@@ -24,7 +24,7 @@ Existen diversas t&eacute;cnicas de conversi&oacute;n a escala de grises a parti
 > Grey_{RGB}(i,j) = \frac{R (i, j) + G (i, j) + B (i, j)}{3}
 > ```
 
-Por su parte, el m&eacute;todo de la Luminosidad (o Luma) consiste en una veri&oacute;n m&aacute;s sofisticada que la del promedio, ya que se realiza una suma de las ponderaciones de los valores de los componentes R, G y B con base en que el ojo humano es m&aacute;as sensible al color verde que a los otros colores (por esto su ponderaci&oacute;n es mayor). Estos valores fueron  establecidos  a  trav&eacute;s  de la  recomendaci&oacute;n  Rec. 601 NTSC por la International Telecommunication Union - Radiocommunications.  
+Por su parte, el m&eacute;todo de la Luminosidad (o Luma) consiste en una veri&oacute;n m&aacute;s sofisticada que la del promedio, ya que se realiza una suma de las ponderaciones de los valores de los componentes R, G y B con base en que el ojo humano es m&aacute;s sensible al color verde que a los otros colores (por esto su ponderaci&oacute;n es mayor). Estos valores fueron  establecidos  a  trav&eacute;s  de la  recomendaci&oacute;n  Rec. 601 NTSC por la International Telecommunication Union - Radiocommunications.  
 
 > :Formula  align=center
 > ```

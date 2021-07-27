@@ -20,7 +20,7 @@ Lewis Carrol, En 1898 dibujó con su máquina de escribir esta mariposa utilizan
 
 La técnica de arte Ascii Art es ampliamente utilizada por artistas, aficionados, hackers. Un ejemplo especialmente interesante de uso y desarrollo creativo del arte ASCII son las obras creadas por el grupo "ASCII Art Ensemble". El grupo, formado por Walter van der Cruijsen, Luka Frelih, Vuk Cosic, fue fundado en 1998. Los miembros del "ASCII Art Ensemble" crearon un software para "codificar" imágenes en movimiento en piezas de arte ASCII animadas (secuenciales). 
 
-Desde el punto de vista de evolución de la gráfica computarizada, el Arte ASCII replantea la observación tradicional de una imagen en base al conjunto de elementos pictóricos que la conforman (ver: píxel), un efecto óptico similar al del puntillismo. Así pues, a una mayor distancia del observador, la imagen hecha en Arte ASCII adquiere mayor definición; exactamente lo opuesto a lo que sucede cuando, al observar con lupa una imagen impresa en un diario, la distancia entre los píxeles que la conforman se hace evidente y la imagen se desvirtúa.
+Desde el punto de vista de evolución de la gráfica computarizada, el Arte ASCII replantea la observación tradicional de una imagen en base al conjunto de elementos pictóricos que la conforman, un efecto óptico similar al del puntillismo. Así pues, a una mayor distancia del observador, la imagen hecha en Arte ASCII adquiere mayor definición; exactamente lo opuesto a lo que sucede cuando, al observar con lupa una imagen impresa en un diario, la distancia entre los píxeles que la conforman se hace evidente y la imagen se desvirtúa.
 
 <div>
 <p style = 'text-align:center;'>
