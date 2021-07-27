@@ -10,7 +10,7 @@ Con el &aacute;nimo de comparar la eficiencia computacional de t&eacute;cnicas d
 | Sistema Operativo | Windows 10 x64 | Windows 10 x64 |
 | Procesador CPU | AMD Ryzen 5 3500U (8 cores) 2.10 GHz | Intel(R) Core(TM) i5-7200 (8 cores) 2.5 GHz|
 | GPU | AMD Radeon Graphics Vega 8 - 5GB | Intel(R) HD Graphics 620 - 4GB |
-| Memoria RAM | 8.00 GB | 16.00 GB |
+| Memoria RAM | 8.00 GB | 8.00 GB |
 
 Los algoritmos/ t&eacute;cnicas que se observar&aacute;an en el presente taller son:
 

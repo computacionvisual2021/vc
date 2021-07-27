@@ -21,11 +21,11 @@ En el caso de la implementaci&oacute;n por ***Software***, el usuario podr&aacut
 
 ## Hardware
  
-> :P5 sketch=/docs/sketches/workshop2/PerformanceHardMascarasVideo.js, width=710, height=655
+[comment]: <> (> :P5 sketch=/docs/sketches/workshop2/PerformanceHardMascarasVideo.js, width=710, height=655)
 
 ## Software
 
-[comment]: <> (> :P5 sketch=/docs/sketches/workshop2/PerformanceSoftConvolMasks.js, width=710, height=710)
+> :P5 sketch=/docs/sketches/workshop2/PerformanceSoftConvolMasks.js, width=710, height=710
 
 
 ## Resultados
